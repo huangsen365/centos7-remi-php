@@ -1,7 +1,7 @@
 FROM centos/systemd
 RUN sed -i 's/tsflags=nodocs/\#tsflags=nodocs/g' /etc/yum.conf
 RUN echo "ip_resolve=4" >> /etc/yum.conf
-RUN yum -y update
+#RUN yum -y update
 RUN yum -y install man-pages man-db man yum-utils
 
 RUN echo "export HISTSIZE=999999999" >> /etc/bashrc
@@ -45,6 +45,8 @@ zlib-devel
 
 COPY vimrc_append_conf.txt /tmp
 RUN cat /tmp/vimrc_append_conf.txt >> /etc/vimrc
+
+RUN yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 
 RUN yum -y install php70 php71 php72 php73 php74
 RUN useradd sshuser
