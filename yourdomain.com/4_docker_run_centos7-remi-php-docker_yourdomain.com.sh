@@ -5,6 +5,7 @@ docker run -d \
   -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
   -v $current_dir/volumes/volume_yourdomain.com/home:/home \
   -v $current_dir/volumes/volume_yourdomain.com/root:/root \
+  -v $current_dir/volumes/volume_yourdomain.com/var/www:/var/www \
   -p 80:80 \
   -p 443:443 \
   -p 2222:22 \
