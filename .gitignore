@@ -1,1 +1,2 @@
 yourdomain.com/volumes/*
+!yourdomain.com/volumes/.keep
