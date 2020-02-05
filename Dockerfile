@@ -58,6 +58,8 @@ RUN rpm -v --import https://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
 RUN rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 RUN yum install -y ffmpeg ffmpeg-devel
 
+RUN sed -i 's/AllowOverride\ None/AllowOverride\ All/g' /etc/httpd/conf/httpd.conf
+
 EXPOSE 80 443
 
 CMD ["/usr/sbin/init"]
