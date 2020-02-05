@@ -69,6 +69,7 @@ COPY www_php-fpm_7300.conf /etc/opt/remi/php73/php-fpm.d/www.conf
 COPY www_php-fpm_7400.conf /etc/opt/remi/php74/php-fpm.d/www.conf
 
 
+
 EXPOSE 80 443
 
 CMD ["/usr/sbin/init"]
