@@ -1,6 +1,6 @@
 [www.yourdomain.com]
-user = apache
-group = apache
+user = sshuser
+group = sshuser
 listen = 127.0.0.1:7001
 listen.allowed_clients = 127.0.0.1
 pm = dynamic
