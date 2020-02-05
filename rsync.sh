@@ -3,6 +3,7 @@ rsync -av /root/ /tmp/default_paths_for_docker/root/
 rsync -av /var/www/ /tmp/default_paths_for_docker/var/www/
 rsync -av /var/log/ /tmp/default_paths_for_docker/var/log/
 rsync -av /etc/httpd/conf.d/ --exlucde '/etc/httpd/conf.d/*' /tmp/default_paths_for_docker/etc/httpd/conf2.d/
+# rsync -av /tmp/httpd_XX01_www.yourdomain.com.conf /tmp/default_paths_for_docker/etc/httpd/conf2.d/
 
 rsync -av /var/opt/remi/php70/lib/php/opcache/ /tmp/default_paths_for_docker/var/opt/remi/php70/lib/php/opcache/
 rsync -av /var/opt/remi/php70/lib/php/session/ /tmp/default_paths_for_docker/var/opt/remi/php70/lib/php/session/
