@@ -60,6 +60,9 @@ RUN yum install -y ffmpeg ffmpeg-devel
 
 RUN sed -i 's/AllowOverride\ None/AllowOverride\ All/g' /etc/httpd/conf/httpd.conf
 
+RUN yum -y install php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm
+
+
 EXPOSE 80 443
 
 CMD ["/usr/sbin/init"]
