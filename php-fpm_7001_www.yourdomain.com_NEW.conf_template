@@ -11,14 +11,14 @@ pm.max_spare_servers = 35
  
  
  
-slowlog = /var/opt/remi/php70/log/php-fpm/www-slow.log
+slowlog = /var/opt/remi/php70/log/php-fpm/www.yourdomain.com-slow.log
  
  
  
  
  
  
-php_admin_value[error_log] = /var/opt/remi/php70/log/php-fpm/www-error.log
+php_admin_value[error_log] = /var/opt/remi/php70/log/php-fpm/www.yourdomain.com-error.log
 php_admin_flag[log_errors] = on
 php_value[session.save_handler] = files
 php_value[session.save_path]    = /var/opt/remi/php70/lib/php/session
