@@ -76,6 +76,7 @@ COPY mkdir.sh /tmp/mkdir.sh
 RUN sh /tmp/mkdir.sh
 COPY rsync.sh /tmp/rsync.sh
 RUN sh /tmp/rsync.sh
+COPY mkdir_chown_chmod.sh /root/mkdir_chown_chmod.sh
 
 
 RUN systemctl enable httpd.service; systemctl enable php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm; systemctl enable sshd
