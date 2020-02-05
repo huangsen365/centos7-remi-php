@@ -72,6 +72,12 @@ COPY php-fpm_7201_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php72/php-
 COPY php-fpm_7301_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php73/php-fpm.d/php-fpm_7301_www.yourdomain.com_NEW2.conf_template
 COPY php-fpm_7401_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php74/php-fpm.d/php-fpm_7401_www.yourdomain.com_NEW2.conf_template
 
+COPY mkdir.sh /tmp/mkdir.sh
+RUN sh /tmp/mkdir.sh
+COPY rsync.sh /tmp/rsync.sh
+RUN sh /tmp/rsync.sh
+
+
 RUN systemctl enable httpd.service; systemctl enable php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm; systemctl enable sshd
 
 EXPOSE 80 443
