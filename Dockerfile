@@ -62,11 +62,11 @@ RUN sed -i 's/AllowOverride\ None/AllowOverride\ All/g' /etc/httpd/conf/httpd.co
 
 RUN yum -y install php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm
 
-COPY www_php-fpm_7001.conf /etc/opt/remi/php70/php-fpm.d/www.conf
-COPY www_php-fpm_7101.conf /etc/opt/remi/php71/php-fpm.d/www.conf
-COPY www_php-fpm_7201.conf /etc/opt/remi/php72/php-fpm.d/www.conf
-COPY www_php-fpm_7301.conf /etc/opt/remi/php73/php-fpm.d/www.conf
-COPY www_php-fpm_7401.conf /etc/opt/remi/php74/php-fpm.d/www.conf
+COPY www_php-fpm_7000.conf /etc/opt/remi/php70/php-fpm.d/www.conf
+COPY www_php-fpm_7100.conf /etc/opt/remi/php71/php-fpm.d/www.conf
+COPY www_php-fpm_7200.conf /etc/opt/remi/php72/php-fpm.d/www.conf
+COPY www_php-fpm_7300.conf /etc/opt/remi/php73/php-fpm.d/www.conf
+COPY www_php-fpm_7400.conf /etc/opt/remi/php74/php-fpm.d/www.conf
 
 
 EXPOSE 80 443
