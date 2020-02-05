@@ -1,6 +1,7 @@
 rsync -av /home/ /tmp/default_paths_for_docker/home/
 rsync -av /root/ /tmp/default_paths_for_docker/root/
 rsync -av /var/www/ /tmp/default_paths_for_docker/var/www/
+rsync -av /var/log/ /tmp/default_paths_for_docker/var/log/
 
 rsync -av /var/opt/remi/php70/lib/php/opcache/ /tmp/default_paths_for_docker/var/opt/remi/php70/lib/php/opcache/
 rsync -av /var/opt/remi/php70/lib/php/session/ /tmp/default_paths_for_docker/var/opt/remi/php70/lib/php/session/
