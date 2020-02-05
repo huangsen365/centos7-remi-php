@@ -2,6 +2,7 @@ mkdir -p /tmp/default_paths_for_docker/home
 mkdir -p /tmp/default_paths_for_docker/root
 mkdir -p /tmp/default_paths_for_docker/var/www
 mkdir -p /tmp/default_paths_for_docker/var/log
+mkdir -p /tmp/default_paths_for_docker/etc/httpd/conf2.d
 
 mkdir -p /tmp/default_paths_for_docker/var/opt/remi/php70/lib/php/opcache
 mkdir -p /tmp/default_paths_for_docker/var/opt/remi/php70/lib/php/session
