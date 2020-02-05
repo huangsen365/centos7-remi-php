@@ -52,8 +52,6 @@ RUN yum -y install php70 php71 php72 php73 php74
 RUN useradd sshuser
 RUN usermod -aG apache sshuser
 
-RUN systemctl enable httpd.service; systemctl enable php72; systemctl enable sshd
-
 RUN rpm -v --import https://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
 RUN rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 RUN yum install -y ffmpeg ffmpeg-devel
@@ -74,6 +72,7 @@ COPY php-fpm_7201_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php72/php-
 COPY php-fpm_7301_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php73/php-fpm.d/php-fpm_7301_www.yourdomain.com_NEW2.conf_template
 COPY php-fpm_7401_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php74/php-fpm.d/php-fpm_7401_www.yourdomain.com_NEW2.conf_template
 
+RUN systemctl enable httpd.service; systemctl enable php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm; systemctl enable sshd
 
 EXPOSE 80 443
 
