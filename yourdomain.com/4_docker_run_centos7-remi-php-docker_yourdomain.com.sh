@@ -6,6 +6,7 @@ docker run -d \
   -v $current_dir/volumes/volume_yourdomain.com/home:/home \
   -v $current_dir/volumes/volume_yourdomain.com/root:/root \
   -v $current_dir/volumes/volume_yourdomain.com/var/www:/var/www \
+  -v $current_dir/volumes/volume_yourdomain.com/var/log:/var/log \
   -v $current_dir/volumes/volume_yourdomain.com/var/opt/remi/php70/lib/php:/var/opt/remi/php70/lib/php \
   -v $current_dir/volumes/volume_yourdomain.com/var/opt/remi/php71/lib/php:/var/opt/remi/php71/lib/php \
   -v $current_dir/volumes/volume_yourdomain.com/var/opt/remi/php72/lib/php:/var/opt/remi/php72/lib/php \
