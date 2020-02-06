@@ -43,22 +43,15 @@ wget \
 zip \
 zlib-devel
 
-COPY vimrc_append_conf.txt /tmp
-RUN cat /tmp/vimrc_append_conf.txt >> /etc/vimrc
-
-RUN yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
-
-RUN yum -y install php70 php71 php72 php73 php74
 RUN useradd sshuser
 RUN usermod -aG apache sshuser
 
 RUN rpm -v --import https://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
 RUN rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
-RUN yum install -y ffmpeg ffmpeg-devel
+RUN yum -y install ffmpeg ffmpeg-devel
 
-RUN sed -i 's/AllowOverride\ None/AllowOverride\ All/g' /etc/httpd/conf/httpd.conf
-
-RUN yum -y install php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm
+RUN yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+RUN yum -y install php70 php71 php72 php73 php74 php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm
 
 COPY www_php-fpm_7000.conf /etc/opt/remi/php70/php-fpm.d/www.conf
 COPY www_php-fpm_7100.conf /etc/opt/remi/php71/php-fpm.d/www.conf
@@ -72,21 +65,29 @@ COPY php-fpm_7201_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php72/php-
 COPY php-fpm_7301_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php73/php-fpm.d/php-fpm_7301_www.yourdomain.com_NEW2.conf_template
 COPY php-fpm_7401_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php74/php-fpm.d/php-fpm_7401_www.yourdomain.com_NEW2.conf_template
 
-COPY mkdir_chown_chmod.sh /root/mkdir_chown_chmod.sh
+RUN sed -i 's/AllowOverride\ None/AllowOverride\ All/g' /etc/httpd/conf/httpd.conf
+RUN echo "IncludeOptional conf2.d/*.conf" >> /etc/httpd/conf/httpd.conf
+
+#COPY httpd_XX01_www.yourdomain.com.conf /tmp/httpd_XX01_www.yourdomain.com.conf
+
+ADD somefiles /tmp/somefiles
+
+#COPY vimrc_append_conf.txt /tmp
+RUN cat /tmp/somefiles/vimrc_append_conf.txt >> /etc/vimrc
+
+#COPY mkdir_chown_chmod.sh /root/mkdir_chown_chmod.sh
 
 COPY mkdir.sh /tmp/mkdir.sh
 RUN sh /tmp/mkdir.sh
 COPY rsync.sh /tmp/rsync.sh
 RUN sh /tmp/rsync.sh
 
-RUN echo "IncludeOptional conf2.d/*.conf" >> /etc/httpd/conf/httpd.conf
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php70\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php70\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php70\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php70/php-fpm.conf
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php71\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php71\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php71\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php71/php-fpm.conf
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php72\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php72\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php72\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php72/php-fpm.conf
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php73\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php73\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php73\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php73/php-fpm.conf
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php74\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php74\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php74\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php74/php-fpm.conf
 
-COPY httpd_XX01_www.yourdomain.com.conf /tmp/httpd_XX01_www.yourdomain.com.conf
 
 RUN systemctl enable httpd.service; systemctl enable php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm; systemctl enable sshd
 
