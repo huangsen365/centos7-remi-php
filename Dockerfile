@@ -80,7 +80,7 @@ COPY rsync.sh /tmp/rsync.sh
 RUN sh /tmp/rsync.sh
 
 RUN echo "IncludeOptional conf2.d/*.conf" >> /etc/httpd/conf/httpd.conf
-RUN echo 'include=/etc/opt/remi/php70/php-fpm2.d/*.conf' >> /etc/opt/remi/php70/php-fpm.conf
+RUN sed -i 's/include\=\/etc\/opt\/remi\/php70\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php70\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php70\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php70/php-fpm.conf
 RUN echo 'include=/etc/opt/remi/php71/php-fpm2.d/*.conf' >> /etc/opt/remi/php71/php-fpm.conf
 RUN echo 'include=/etc/opt/remi/php72/php-fpm2.d/*.conf' >> /etc/opt/remi/php72/php-fpm.conf
 RUN echo 'include=/etc/opt/remi/php73/php-fpm2.d/*.conf' >> /etc/opt/remi/php73/php-fpm.conf
