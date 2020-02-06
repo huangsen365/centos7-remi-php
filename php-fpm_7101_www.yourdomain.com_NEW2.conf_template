@@ -1,4 +1,4 @@
-[www.yourdomain.com]
+[www.yourdomain.com-php71]
 user = sshuser
 group = sshuser
 listen = 127.0.0.1:7101
