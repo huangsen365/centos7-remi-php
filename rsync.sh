@@ -12,6 +12,7 @@ rsync -av /tmp/somefiles/gitpull.php /tmp/default_paths_for_docker/var/www/www.y
 rsync -av /tmp/somefiles/mkdir_chown_chmod.sh /tmp/default_paths_for_docker/root/mkdir_chown_chmod.sh
 
 chown -R 1000:1000 /tmp/default_paths_for_docker/var/www/www.yourdomain.com
+cat /tmp/somefiles/vimrc_append_conf.txt >> /etc/vimrc
 
 rsync -av /etc/opt/remi/php70/php-fpm.d/ --exclude '*' /tmp/default_paths_for_docker/etc/opt/remi/php70/php-fpm2.d/
 rsync -av /etc/opt/remi/php70/php-fpm.d/php-fpm_7001_www.yourdomain.com_NEW2.conf_template /tmp/default_paths_for_docker/etc/opt/remi/php70/php-fpm2.d/php-fpm_7001_www.yourdomain.com_NEW2.conf

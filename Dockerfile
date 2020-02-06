@@ -73,7 +73,7 @@ RUN echo "IncludeOptional conf2.d/*.conf" >> /etc/httpd/conf/httpd.conf
 ADD somefiles /tmp/somefiles
 
 #COPY vimrc_append_conf.txt /tmp
-RUN cat /tmp/somefiles/vimrc_append_conf.txt >> /etc/vimrc
+#RUN cat /tmp/somefiles/vimrc_append_conf.txt >> /etc/vimrc
 
 #COPY mkdir_chown_chmod.sh /root/mkdir_chown_chmod.sh
 
