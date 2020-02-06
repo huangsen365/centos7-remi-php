@@ -77,10 +77,10 @@ ADD somefiles /tmp/somefiles
 
 #COPY mkdir_chown_chmod.sh /root/mkdir_chown_chmod.sh
 
-COPY mkdir.sh /tmp/mkdir.sh
-RUN sh /tmp/mkdir.sh
-COPY rsync.sh /tmp/rsync.sh
-RUN sh /tmp/rsync.sh
+#COPY mkdir.sh /tmp/mkdir.sh
+RUN sh /tmp/somefiles/mkdir.sh
+#COPY rsync.sh /tmp/rsync.sh
+RUN sh /tmp/somefiles/rsync.sh
 
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php70\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php70\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php70\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php70/php-fpm.conf
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php71\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php71\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php71\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php71/php-fpm.conf
