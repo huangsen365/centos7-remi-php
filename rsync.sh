@@ -35,18 +35,33 @@ rsync -av /var/opt/remi/php74/lib/php/wsdlcache/ /tmp/default_paths_for_docker/v
 rsync -av /tmp/default_paths_for_docker/var/opt/remi/php70/lib/php/opcache/ /var/opt/remi/php70/lib/php/opcache/www.yourdomain.com/
 rsync -av /tmp/default_paths_for_docker/var/opt/remi/php70/lib/php/session/ /var/opt/remi/php70/lib/php/session/www.yourdomain.com/
 rsync -av /tmp/default_paths_for_docker/var/opt/remi/php70/lib/php/wsdlcache/ /var/opt/remi/php70/lib/php/wsdlcache/www.yourdomain.com/
+touch /var/opt/remi/php70/lib/php/opcache/www.yourdomain.com/.keep
+touch /var/opt/remi/php70/lib/php/session/www.yourdomain.com/.keep
+touch /var/opt/remi/php70/lib/php/wsdlcache/www.yourdomain.com/.keep
 rsync -av /tmp/default_paths_for_docker/var/opt/remi/php71/lib/php/opcache/ /var/opt/remi/php71/lib/php/opcache/www.yourdomain.com/
 rsync -av /tmp/default_paths_for_docker/var/opt/remi/php71/lib/php/session/ /var/opt/remi/php71/lib/php/session/www.yourdomain.com/
 rsync -av /tmp/default_paths_for_docker/var/opt/remi/php71/lib/php/wsdlcache/ /var/opt/remi/php71/lib/php/wsdlcache/www.yourdomain.com/
+touch /var/opt/remi/php71/lib/php/opcache/www.yourdomain.com/.keep
+touch /var/opt/remi/php71/lib/php/session/www.yourdomain.com/.keep
+touch /var/opt/remi/php71/lib/php/wsdlcache/www.yourdomain.com/.keep
 rsync -av /tmp/default_paths_for_docker/var/opt/remi/php72/lib/php/opcache/ /var/opt/remi/php72/lib/php/opcache/www.yourdomain.com/
 rsync -av /tmp/default_paths_for_docker/var/opt/remi/php72/lib/php/session/ /var/opt/remi/php72/lib/php/session/www.yourdomain.com/
 rsync -av /tmp/default_paths_for_docker/var/opt/remi/php72/lib/php/wsdlcache/ /var/opt/remi/php72/lib/php/wsdlcache/www.yourdomain.com/
+touch /var/opt/remi/php72/lib/php/opcache/www.yourdomain.com/.keep
+touch /var/opt/remi/php72/lib/php/session/www.yourdomain.com/.keep
+touch /var/opt/remi/php72/lib/php/wsdlcache/www.yourdomain.com/.keep
 rsync -av /tmp/default_paths_for_docker/var/opt/remi/php73/lib/php/opcache/ /var/opt/remi/php73/lib/php/opcache/www.yourdomain.com/
 rsync -av /tmp/default_paths_for_docker/var/opt/remi/php73/lib/php/session/ /var/opt/remi/php73/lib/php/session/www.yourdomain.com/
 rsync -av /tmp/default_paths_for_docker/var/opt/remi/php73/lib/php/wsdlcache/ /var/opt/remi/php73/lib/php/wsdlcache/www.yourdomain.com/
+touch /var/opt/remi/php73/lib/php/opcache/www.yourdomain.com/.keep
+touch /var/opt/remi/php73/lib/php/session/www.yourdomain.com/.keep
+touch /var/opt/remi/php73/lib/php/wsdlcache/www.yourdomain.com/.keep
 rsync -av /tmp/default_paths_for_docker/var/opt/remi/php74/lib/php/opcache/ /var/opt/remi/php74/lib/php/opcache/www.yourdomain.com/
 rsync -av /tmp/default_paths_for_docker/var/opt/remi/php74/lib/php/session/ /var/opt/remi/php74/lib/php/session/www.yourdomain.com/
 rsync -av /tmp/default_paths_for_docker/var/opt/remi/php74/lib/php/wsdlcache/ /var/opt/remi/php74/lib/php/wsdlcache/www.yourdomain.com/
+touch /var/opt/remi/php74/lib/php/opcache/www.yourdomain.com/.keep
+touch /var/opt/remi/php74/lib/php/session/www.yourdomain.com/.keep
+touch /var/opt/remi/php74/lib/php/wsdlcache/www.yourdomain.com/.keep
 
 
 rsync -av /var/opt/remi/php70/lib/php/opcache/ /tmp/default_paths_for_docker/var/opt/remi/php70/lib/php/opcache/
