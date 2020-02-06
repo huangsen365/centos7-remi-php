@@ -9,6 +9,7 @@ rsync -av /tmp/somefiles/httpd_XX01_www.yourdomain.com.conf /tmp/default_paths_f
 rsync -av /tmp/somefiles/info.php /tmp/default_paths_for_docker/var/www/www.yourdomain.com/www/info.php
 rsync -av /tmp/somefiles/gitpull.sh /tmp/default_paths_for_docker/var/www/www.yourdomain.com/gitpull.sh
 rsync -av /tmp/somefiles/gitpull.php /tmp/default_paths_for_docker/var/www/www.yourdomain.com/www/gitpull.php
+rsync -av /tmp/somefiles/mkdir_chown_chmod.sh /tmp/default_paths_for_docker/root/mkdir_chown_chmod.sh
 
 chown -R 1000:1000 /tmp/default_paths_for_docker/var/www/www.yourdomain.com
 

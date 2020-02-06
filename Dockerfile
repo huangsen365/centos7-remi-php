@@ -68,14 +68,14 @@ COPY php-fpm_7401_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php74/php-
 RUN sed -i 's/AllowOverride\ None/AllowOverride\ All/g' /etc/httpd/conf/httpd.conf
 RUN echo "IncludeOptional conf2.d/*.conf" >> /etc/httpd/conf/httpd.conf
 
-COPY httpd_XX01_www.yourdomain.com.conf /tmp/httpd_XX01_www.yourdomain.com.conf
+#COPY httpd_XX01_www.yourdomain.com.conf /tmp/httpd_XX01_www.yourdomain.com.conf
 
 ADD somefiles /tmp/somefiles
 
 #COPY vimrc_append_conf.txt /tmp
 RUN cat /tmp/somefiles/vimrc_append_conf.txt >> /etc/vimrc
 
-COPY mkdir_chown_chmod.sh /root/mkdir_chown_chmod.sh
+#COPY mkdir_chown_chmod.sh /root/mkdir_chown_chmod.sh
 
 COPY mkdir.sh /tmp/mkdir.sh
 RUN sh /tmp/mkdir.sh
