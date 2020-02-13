@@ -72,6 +72,12 @@ RUN echo "IncludeOptional conf2.d/*.conf" >> /etc/httpd/conf/httpd.conf
 
 ADD somefiles /tmp/somefiles
 
+RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php70.txt) --exclude=php70-php-pecl-rdkafka4* --exclude=php70-php-oci8* --exclude=php70-php-pecl-swoole4* --exclude=php70-php-pecl-imagick* --exclude=php70-php-pecl-redis5* --exclude=php70-php-pecl-swoole2* --exclude=php70-php-pecl-redis4* --exclude=php70-php-yaconf* --exclude=php70-php-horde-horde-lz4* --exclude=vips-full* --exclude=php70-php-sqlsrv* --exclude=php70-php-smbclient* --exclude=php70-php-pecl-oci8* --exclude=php70-php-pecl-datadog-trace* --exclude=php70-php-pecl-uuid* --exclude=php70-php-pecl-stackdriver-debugger* --exclude=php70-php-suhosin*
+RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php71.txt) --exclude=php71-php-pecl-redis5* --exclude=php71-php-pecl-redis4 --exclude=php71-php-pecl-imagick* --exclude=php71-php-sqlsrv* --exclude=php71-php-pecl-swoole4* --exclude=php71-php-pecl-gmagick* --exclude=php71-php-pecl-rdkafka4* --exclude=php71-php-oci8* --exclude=php71-php-horde-horde-lz4* --exclude=php71-php-pecl-swoole2* --exclude=php71-php-smbclient*
+RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php72.txt)
+RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php73.txt)
+RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php74.txt)
+
 #COPY vimrc_append_conf.txt /tmp
 #RUN cat /tmp/somefiles/vimrc_append_conf.txt >> /etc/vimrc
 
