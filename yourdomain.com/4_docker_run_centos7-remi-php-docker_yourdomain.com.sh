@@ -2,14 +2,19 @@ current_dir=$(pwd)
 #httpd_log_dir_name=httpd_$(date +%Y-%m-%d_%H%M%S)_$(hostname)
 #cp -pr $current_dir/volumes/volume_yourdomain.com/var/log/httpd $current_dir/volumes/volume_yourdomain.com/var/log/$httpd_log_dir_name
 date_and_hostname=$(date +%Y-%m-%d_%H%M%S)_$(hostname)
+home_dir_name=home_$date_and_hostname
+root_dir_name=root_$date_and_hostname
 log_dir_name=log_$date_and_hostname
+cotainer_name=c_$date_and_hostname
+cp -pr $current_dir/volumes/volume_yourdomain.com/home $current_dir/volumes/volume_yourdomain.com/$home_dir_name
+cp -pr $current_dir/volumes/volume_yourdomain.com/root $current_dir/volumes/volume_yourdomain.com/$root_dir_name
 cp -pr $current_dir/volumes/volume_yourdomain.com/var/log $current_dir/volumes/volume_yourdomain.com/var/$log_dir_name
 
 docker run -d \
   --privileged \
   -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
-  -v $current_dir/volumes/volume_yourdomain.com/home:/home \
-  -v $current_dir/volumes/volume_yourdomain.com/root:/root \
+  -v $current_dir/volumes/volume_yourdomain.com/$home_dir_name:/home \
+  -v $current_dir/volumes/volume_yourdomain.com/$root_dir_name:/root \
   -v $current_dir/volumes/volume_yourdomain.com/var/www:/var/www \
   -v $current_dir/volumes/volume_yourdomain.com/var/$log_dir_name:/var/log \
   -v $current_dir/volumes/volume_yourdomain.com/etc/httpd/conf2.d:/etc/httpd/conf2.d \
@@ -27,5 +32,5 @@ docker run -d \
   -p 443:443 \
   -p 2222:22 \
   --restart always \
-  --name c_$date_and_hostname \
+  --name $cotainer_name \
   centos7-remi-php
