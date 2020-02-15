@@ -1,11 +1,11 @@
-docker ps -a | grep c_httpd_
+docker ps -a | grep c_
 
 if [ $? -eq 0 ]
 then
-    echo "Found docker containers named as c_httpd_* , please manage them properly and then rerun this script!"
+    echo "Found docker containers named as c_* , please manage them properly and then rerun this script!"
     exit
 else
-    echo "Not found existing docker containers named as c_httpd_* , this script will continue run in 3 seconds..."
+    echo "Not found existing docker containers named as c_* , this script will continue run in 3 seconds..."
     sleep 3
     echo "ready go in 1s!"
     sleep 1
