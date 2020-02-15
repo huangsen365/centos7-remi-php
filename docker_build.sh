@@ -1,1 +1,1 @@
-docker build -t centos7-remi-php .
+docker build -t centos7-remi-php . > ./docker_build_log/$(date +%Y-%m-%d_%H%M%S)
