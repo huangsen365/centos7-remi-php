@@ -1,3 +1,5 @@
 yourdomain.com/volumes/*
 !yourdomain.com/volumes/.keep
 yourdomain.com/.bash_history
+docker_build_log/*
+!docker_build_log/.keep
