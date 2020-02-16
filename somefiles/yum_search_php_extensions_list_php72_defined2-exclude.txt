@@ -1,1 +1,1 @@
-php72-php-pecl-redis5
+php72-php-pecl-redis5 php72-php-smbclient
