@@ -84,11 +84,11 @@ ADD somefiles /tmp/somefiles
 # RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php73_defined.txt)
 # RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php74_defined.txt)
 
-RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php70_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php70_defined2-exclude.txt)"
-RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php71_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php71_defined2-exclude.txt)"
+#RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php70_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php70_defined2-exclude.txt)"
+#RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php71_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php71_defined2-exclude.txt)"
 #RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php72_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php72_defined2-exclude.txt)"
 #RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php73_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php73_defined2-exclude.txt)"
-#RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php74_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php74_defined2-exclude.txt)"
+RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php74_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php74_defined2-exclude.txt)"
 
 
 #COPY vimrc_append_conf.txt /tmp
