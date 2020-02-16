@@ -106,4 +106,3 @@ RUN systemctl enable httpd.service; systemctl enable php70-php-fpm php71-php-fpm
 EXPOSE 80 443
 
 CMD ["/usr/sbin/init"]
-#
