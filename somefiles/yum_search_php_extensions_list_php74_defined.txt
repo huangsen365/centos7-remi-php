@@ -1,1 +1,2 @@
 php74-php-bcmath
+php74-php-cli

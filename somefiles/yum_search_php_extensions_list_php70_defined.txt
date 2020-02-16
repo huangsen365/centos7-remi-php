@@ -1,1 +1,2 @@
 php70-php-bcmath
+php70-php-cli
