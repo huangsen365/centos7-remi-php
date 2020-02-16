@@ -1,2 +1,3 @@
+
 php72-php-bcmath
-php72-php-cli
+php72-php-dba
