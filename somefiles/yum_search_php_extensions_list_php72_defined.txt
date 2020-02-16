@@ -28,3 +28,4 @@ php72-php-snmp
 php72-php-soap
 php72-php-xml
 php72-php-xmlrpc
+php72-php-zip
