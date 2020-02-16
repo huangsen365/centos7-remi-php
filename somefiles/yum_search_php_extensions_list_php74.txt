@@ -5,7 +5,6 @@ php74-php-pecl-raphf-devel
 php74-php-pecl-xmldiff-devel
 php74-php-pecl-yaconf-devel
 php74-php-zephir-parser-devel
-php74-php
 php74-php-ast
 php74-php-bcmath
 php74-php-brotli

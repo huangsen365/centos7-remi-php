@@ -4,7 +4,6 @@ php73-php-pecl-raphf-devel
 php73-php-pecl-xmldiff-devel
 php73-php-pecl-yaconf-devel
 php73-php-zephir-parser-devel
-php73-php
 php73-php-ast
 php73-php-bcmath
 php73-php-brotli

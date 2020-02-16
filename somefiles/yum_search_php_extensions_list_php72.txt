@@ -8,7 +8,6 @@ php72-php-pecl-swoole2-devel
 php72-php-pecl-xmldiff-devel
 php72-php-pecl-yaconf-devel
 php72-php-zephir-parser-devel
-php72-php
 php72-php-ast
 php72-php-bcmath
 php72-php-brotli

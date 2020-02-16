@@ -5,7 +5,6 @@ php70-php-pecl-xmldiff-devel
 php70-php-pecl-yaconf-devel
 php70-php-yaconf-devel
 php70-php-zephir-parser-devel
-php70-php
 php70-php-ast
 php70-php-bcmath
 php70-php-brotli
