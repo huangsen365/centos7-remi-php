@@ -78,16 +78,16 @@ ADD somefiles /tmp/somefiles
 # RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php73.txt) --exclude=php73-php-horde-horde* --exclude=php73-php-pecl-imagick* --exclude=php73-php-pecl-gmagick* --exclude=php73-php-pecl-rdkafka* --exclude=php73-php-phalcon4* --exclude=php73-php-pecl-redis5* --exclude=php73-php-pecl-oci8* --exclude=php73-php-oci8* --exclude=php73-php-sqlsrv* --exclude=php73-php-smbclient* --exclude=php73-php-ioncube-loader*
 # RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php74.txt) --exclude=php74-php-pecl-gmagick* --exclude=php74-php-pecl-imagick* --exclude=php74-php-sqlsrv* --exclude=php74-php-snuffleupagus* --exclude=php74-php-pecl-tcpwrap* --exclude=php74-php-snuffleupagus* --exclude=php74-php-horde-horde* --exclude=php74-php-smbclient* --exclude=php74-php-pecl-rdkafka* --exclude=php74-php-pecl-redis4* --exclude=php74-php-ioncube-loader*
 
-# RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php70_defined.txt)
-# RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php71_defined.txt)
-# RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php72_defined.txt)
-# RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php73_defined.txt)
-# RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php74_defined.txt)
+RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php70_defined.txt)
+RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php71_defined.txt)
+RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php72_defined.txt)
+RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php73_defined.txt)
+RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php74_defined.txt)
 
-#RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php70_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php70_defined2-exclude.txt)"
-#RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php71_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php71_defined2-exclude.txt)"
-#RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php72_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php72_defined2-exclude.txt)"
-#RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php73_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php73_defined2-exclude.txt)"
+RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php70_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php70_defined2-exclude.txt)"
+RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php71_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php71_defined2-exclude.txt)"
+RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php72_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php72_defined2-exclude.txt)"
+RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php73_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php73_defined2-exclude.txt)"
 RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php74_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php74_defined2-exclude.txt)"
 
 
