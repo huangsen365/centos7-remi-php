@@ -1,7 +1,8 @@
 FROM centos/systemd
 RUN sed -i 's/tsflags=nodocs/\#tsflags=nodocs/g' /etc/yum.conf
 RUN echo "ip_resolve=4" >> /etc/yum.conf
-#RUN yum -y update
+RUN yum makecache fast
+RUN yum -y update
 RUN yum -y install man-pages man-db man yum-utils
 
 RUN echo "export HISTSIZE=999999999" >> /etc/bashrc
@@ -12,7 +13,7 @@ RUN echo "export EDITOR=\"vim\"" >> /etc/bashrc
 RUN rm -rf /etc/localtime
 RUN ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-RUN yum makecache fast
+#RUN yum makecache fast
 
 RUN yum -y --enablerepo=extras install epel-release centos-release-scl
 RUN yum -y install scl-utils
@@ -107,6 +108,7 @@ RUN sed -i 's/include\=\/etc\/opt\/remi\/php72\/php-fpm.d\/\*\.conf/include\=\/e
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php73\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php73\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php73\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php73/php-fpm.conf
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php74\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php74\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php74\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php74/php-fpm.conf
 
+RUN yum -y update
 
 RUN systemctl enable httpd.service; systemctl enable php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm; systemctl enable sshd
 
