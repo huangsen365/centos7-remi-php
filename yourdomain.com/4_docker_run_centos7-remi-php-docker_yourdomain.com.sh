@@ -14,7 +14,9 @@ docker run -d \
   --privileged \
   -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
   -v $current_dir/volumes/volume_yourdomain.com/$home_dir_name:/home \
+  -v $current_dir/volumes/volume_yourdomain.com/home/sshuser/.ssh:/home/sshuser/.ssh \
   -v $current_dir/volumes/volume_yourdomain.com/$root_dir_name:/root \
+  -v $current_dir/volumes/volume_yourdomain.com/root/.ssh:/root/.ssh \
   -v $current_dir/volumes/volume_yourdomain.com/var/www:/var/www \
   -v $current_dir/volumes/volume_yourdomain.com/var/$log_dir_name:/var/log \
   -v $current_dir/volumes/volume_yourdomain.com/etc/httpd/conf2.d:/etc/httpd/conf2.d \

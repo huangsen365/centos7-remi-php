@@ -1,5 +1,12 @@
 mkdir -p /tmp/default_paths_for_docker/home
+mkdir -p /tmp/default_paths_for_docker/home/sshuser/.ssh
+chmod 700 /tmp/default_paths_for_docker/home/sshuser/.ssh
+chown 1000:1000 /tmp/default_paths_for_docker/home/sshuser/.ssh
+
 mkdir -p /tmp/default_paths_for_docker/root
+mkdir -p /tmp/default_paths_for_docker/root/.ssh
+chmod 700 /tmp/default_paths_for_docker/root/.ssh
+
 mkdir -p /tmp/default_paths_for_docker/var/www
 mkdir -p /tmp/default_paths_for_docker/var/log
 mkdir -p /tmp/default_paths_for_docker/etc/httpd/conf2.d
