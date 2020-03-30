@@ -71,7 +71,7 @@ RUN echo "IncludeOptional conf2.d/*.conf" >> /etc/httpd/conf/httpd.conf
 
 #COPY httpd_XX01_www.yourdomain.com.conf /tmp/httpd_XX01_www.yourdomain.com.conf
 
-ADD somefiles /tmp/somefiles
+ADD somefiles_for_yum /tmp/somefiles_for_yum
 
 # RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php70.txt) --exclude=php70-php-pecl-rdkafka* --exclude=php70-php-oci8* --exclude=php70-php-pecl-swoole4* --exclude=php70-php-pecl-imagick* --exclude=php70-php-pecl-redis5* --exclude=php70-php-pecl-swoole2* --exclude=php70-php-pecl-redis4* --exclude=php70-php-yaconf* --exclude=php70-php-horde-horde-lz4* --exclude=vips-full* --exclude=php70-php-sqlsrv* --exclude=php70-php-smbclient* --exclude=php70-php-pecl-oci8* --exclude=php70-php-pecl-datadog-trace* --exclude=php70-php-pecl-uuid* --exclude=php70-php-pecl-stackdriver-debugger* --exclude=php70-php-suhosin* --exclude=php70-php-ioncube-loader*
 # RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php71.txt) --exclude=php71-php-pecl-redis5* --exclude=php71-php-pecl-redis4 --exclude=php71-php-pecl-imagick* --exclude=php71-php-sqlsrv* --exclude=php71-php-pecl-swoole4* --exclude=php71-php-pecl-gmagick* --exclude=php71-php-pecl-rdkafka* --exclude=php71-php-oci8* --exclude=php71-php-horde-horde-lz4* --exclude=php71-php-pecl-swoole2* --exclude=php71-php-smbclient* --exclude=php71-php-ioncube-loader* --exclude=php71-php-pecl-uopz* --exclude=php71-php-pecl-oci8* --exclude=php71-php-pecl-runkit7* --exclude=php71-php-pecl-stackdriver-debugger* --exclude=php71-php-pecl-seasclick*
@@ -91,6 +91,7 @@ RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php72_def
 RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php73_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php73_defined2-exclude.txt)"
 RUN yum -y install $(cat /tmp/somefiles/yum_search_php_extensions_list_php74_defined2.txt) --exclude="$(cat /tmp/somefiles/yum_search_php_extensions_list_php74_defined2-exclude.txt)"
 
+ADD somefiles /tmp/somefiles
 
 #COPY vimrc_append_conf.txt /tmp
 #RUN cat /tmp/somefiles/vimrc_append_conf.txt >> /etc/vimrc
