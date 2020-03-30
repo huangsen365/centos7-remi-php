@@ -15,7 +15,9 @@ RUN ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 #RUN yum makecache fast
 
-RUN yum -y --enablerepo=extras install epel-release centos-release-scl
+RUN yum -y --enablerepo=extras install centos-release-scl
+RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
 RUN yum -y install scl-utils
 RUN yum -y install bzip2 \
 cronie \
