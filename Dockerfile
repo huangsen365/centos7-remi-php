@@ -45,6 +45,7 @@ mariadb-server \
 mod_ssl \
 mtr \
 mysql \
+net-tools \
 nginx \
 openssh-clients \
 openssh-server \
