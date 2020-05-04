@@ -53,10 +53,10 @@ sh ./docker_build.sh
 # 执行以下命令创建容器实例 - Run container
 下载基本模板文件
 ```
-mkdir -p /root/data1
+mkdir -p /root/data1 /root/wget_download
 cd /root/data1
-wget https://github.com/huangsen365/centos7-remi-php/archive/master.zip -O /root/data1/centos7-remi-php.zip
-yum -y install unzip ; unzip /root/data1/centos7-remi-php.zip -d /root/data1/
+wget https://github.com/huangsen365/centos7-remi-php/archive/master.zip -O /root/wget_download/centos7-remi-php.zip
+yum -y install unzip ; unzip /root/wget_download/centos7-remi-php.zip -d /root/data1/
 ```
 执行脚本
 ```
