@@ -2,7 +2,7 @@ docker ps -a | grep c_
 
 if [ $? -eq 0 ]
 then
-    echo "Found docker containers named as c_* , please manage them properly and then rerun this script!"
+    echo "\033[0;31mFound docker containers named as c_* , please manage them properly and then rerun this script!\033[0m"
     exit
 else
     echo "Not found existing docker containers named as c_* , this script will continue run in 3 seconds..."
