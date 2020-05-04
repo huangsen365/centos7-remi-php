@@ -1,5 +1,5 @@
 # centos7-remi-php
-CentOS 7 Remi php Docker image
+CentOS 7 Remi PHP Docker Image 容器镜像
 
 OS 操作系统: CentOS 7
 
