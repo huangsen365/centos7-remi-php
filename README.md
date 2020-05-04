@@ -50,7 +50,7 @@ docker pull huangsen365/centos7-remi-php
 ```
 sh ./docker_build.sh 
 ```
-# 通过以上方法得到Docker镜像后再执行以下命令创建容器实例 - Run container
+# 执行以下命令创建容器实例 - Run container
 ```
 cd ./yourdomain.com/ ; sh ./run.sh
 ```
