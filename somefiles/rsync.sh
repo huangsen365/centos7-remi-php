@@ -4,9 +4,8 @@ rsync -av /var/www/ /tmp/default_paths_for_docker/var/www/
 rsync -av /var/log/ /tmp/default_paths_for_docker/var/log/
 
 rsync -av /etc/httpd/conf.d/ --exclude '*' /tmp/default_paths_for_docker/etc/httpd/conf2.d/
-#rsync -av /tmp/httpd_XX01_www.yourdomain.com.conf /etc/httpd/conf2.d/httpd_7201_www.yourdomain.com.conf
-rsync -av /tmp/somefiles/httpd_XX01_www.yourdomain.com.conf /tmp/default_paths_for_docker/etc/httpd/conf2.d/httpd_7201_www.yourdomain.com.conf
-rsync -av /tmp/somefiles/httpd_XX01_www.yourdomain.com.conf /tmp/default_paths_for_docker/etc/httpd/conf2.d/httpd_7201_www.yourdomain.com.conf_template
+rsync -av /tmp/somefiles/httpd_XX01_www.yourdomain.com.conf /tmp/default_paths_for_docker/etc/httpd/conf2.d/httpd_XX01_www.yourdomain.com.conf
+rsync -av /tmp/somefiles/httpd_XX01_www.yourdomain.com.conf /tmp/default_paths_for_docker/etc/httpd/conf2.d/httpd_XX01_www.yourdomain.com.conf_template
 rsync -av /tmp/somefiles/info.php /tmp/default_paths_for_docker/var/www/www.yourdomain.com/www/info.php
 rsync -av /tmp/somefiles/gitpull.sh /tmp/default_paths_for_docker/var/www/www.yourdomain.com/gitpull.sh
 rsync -av /tmp/somefiles/gitpull.php /tmp/default_paths_for_docker/var/www/www.yourdomain.com/www/gitpull.php
