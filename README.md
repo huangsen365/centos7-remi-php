@@ -64,7 +64,7 @@ yum -y install unzip ; unzip /root/wget_download/centos7-remi-php.zip -d /root/d
 cd /root/data1/centos7-remi-php-master/yourdomain.com/ ; sh ./run.sh
 ```
 # 注意事项
-时区为东八区（UTC+8），有需要可以参考以下命令自行修改Dockerfile
+容器默认时区为东八区（UTC+8），有需要可以参考以下命令自行修改Dockerfile
 ```
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ```
