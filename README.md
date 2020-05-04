@@ -7,4 +7,5 @@ sh ./docker_build.sh
 sh ./yourdomain.com/run.sh
 注意事项
 时区为东八区（UTC+8），有需要可以参考以下命令自行修改
+
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
