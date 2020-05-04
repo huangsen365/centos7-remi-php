@@ -5,7 +5,7 @@ OS 操作系统: CentOS 7
 
 Web 引擎: Apache (httpd)
 
-PHP-FPM 组件: 包含了常用的PHP 7.0/7.1/7.2/7.4 版本。
+PHP-FPM 组件: 包含了常用的 PHP 7.0/7.1/7.2/7.4 版本。
 # 前提: 安装Docker环境 - Dependency
 方法1 (Linux): docker-ce镜像-docker-ce下载地址-docker-ce安装教程-阿里巴巴开源镜像站
 ```
