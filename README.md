@@ -27,6 +27,7 @@ docker run hello-world
 # 方法一 （直接从Docker官方公共仓库拉取，推荐）
 【针对中国境内用户】
 使用Docker时需要首先下载一个官方镜像，例如 mysql、wordpress。然而由于网络原因，下载一个Docker官方镜像可能会需要很长的时间，甚至下载失败。为此，阿里云容器镜像服务ACR提供了官方的镜像站点，从而加速官方镜像的下载。
+
 参考引用自 https://help.aliyun.com/document_detail/60750.html
 ```
 sudo mkdir -p /etc/docker
