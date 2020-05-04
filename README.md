@@ -51,8 +51,16 @@ docker pull huangsen365/centos7-remi-php
 sh ./docker_build.sh 
 ```
 # 执行以下命令创建容器实例 - Run container
+下载基本模板文件
 ```
-cd ./yourdomain.com/ ; sh ./run.sh
+mkdir -p /root/data1
+cd /root/data1
+wget https://github.com/huangsen365/centos7-remi-php/archive/master.zip -O /root/data1/centos7-remi-php.zip
+unzip /root/data1/centos7-remi-php.zip -d /root/data1/
+```
+执行脚本
+```
+cd /root/data1/centos7-remi-php-master/yourdomain.com/ ; sh ./run.sh
 ```
 # 注意事项
 时区为东八区（UTC+8），有需要可以参考以下命令自行修改Dockerfile
