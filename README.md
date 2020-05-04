@@ -2,6 +2,15 @@
 centos7 remi php Docker image
 
 包含了常见的PHP 7.0/7.1/7.2/7.4 版本。
+# 前提: 安装Docker环境 - Dependency
+方法1 (Linux): docker-ce镜像-docker-ce下载地址-docker-ce安装教程-阿里巴巴开源镜像站
+```
+https://developer.aliyun.com/mirror/docker-ce
+```
+方法2: Get Docker _ Docker Documentation
+```
+https://docs.docker.com/get-docker/
+```
 # 如何使用 - How to use it?
 请参考以下步骤 Please refer to below steps
 # Step 1 - 执行以下命令构建镜像 - Build image
