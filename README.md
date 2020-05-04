@@ -54,7 +54,6 @@ sh ./docker_build.sh
 下载基本模板文件
 ```
 mkdir -p /root/data1 /root/wget_download
-cd /root/data1
 yum -y install wget ; wget https://github.com/huangsen365/centos7-remi-php/archive/master.zip -O /root/wget_download/centos7-remi-php.zip
 yum -y install unzip ; unzip /root/wget_download/centos7-remi-php.zip -d /root/data1/
 ```
@@ -64,6 +63,11 @@ cd /root/data1/centos7-remi-php-master/yourdomain.com/ ; sh ./run.sh
 ```
 # 注意事项
 时区为东八区（UTC+8），有需要可以参考以下命令自行修改Dockerfile
+
+默认站点配置
+```
+./volumes/volume_yourdomain.com/etc/httpd/conf2.d/httpd_7201_www.yourdomain.com.conf
+```
 
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 # 有疑问?欢迎通过以下渠道反馈交流 - Welcome feedback
