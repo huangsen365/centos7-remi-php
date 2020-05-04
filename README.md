@@ -2,7 +2,7 @@
 centos7 remi php Docker image
 
 包含了常见的PHP 7.0/7.1/7.2/7.4 版本。
-# 如何使用 - HOW TO USE IT
+# 如何使用 - How to use it?
 请参考以下步骤 Please refer to below steps
 # Step 1 - 执行以下命令即可构建镜像
 sh ./docker_build.sh 
