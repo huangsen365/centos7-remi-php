@@ -68,3 +68,4 @@ cd /root/data1/centos7-remi-php-master/yourdomain.com/ ; sh ./run.sh
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 # 有疑问?欢迎通过以下渠道反馈交流 - Welcome feedback
 https://github.com/huangsen365/centos7-remi-php/issues
+
