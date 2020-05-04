@@ -22,7 +22,7 @@ systemctl enable docker
 systemctl status docker
 docker run hello-world
 ```
-# 如何使用 - How to use it?
+# 如何获得此 Docker 镜像 - How to get this Docker image?
 请参考以下两个方法、步骤 Please refer to below steps
 # 方法一 （直接从Docker官方公共仓库拉取，推荐）
 【针对中国境内用户】
@@ -50,7 +50,7 @@ docker pull huangsen365/centos7-remi-php
 ```
 sh ./docker_build.sh 
 ```
-# 执行以下命令创建容器实例 - Run container
+# 如何创建容器实例? 执行以下命令 - Run container
 下载基本模板文件
 ```
 mkdir -p /root/data1 /root/wget_download
