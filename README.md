@@ -24,7 +24,7 @@ docker run hello-world
 ```
 # 如何使用 - How to use it?
 请参考以下两个方法、步骤 Please refer to below steps
-# 方法一 （直接从Docker官方公网仓库拉取，推荐）
+# 方法一 （直接从Docker官方公共仓库拉取，推荐）
 Docker Pull Command
 ```
 docker pull huangsen365/centos7-remi-php
