@@ -34,34 +34,8 @@ RUN yum -y --enablerepo=extras install centos-release-scl
 RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 RUN yum -y install scl-utils
-RUN yum -y install bzip2 \
-cronie \
-git \
-htop \
-httpd \
-iftop \
-logrotate \
-mariadb-server \
-mod_ssl \
-mtr \
-mysql \
-net-tools \
-nginx \
-openssh-clients \
-openssh-server \
-redis \
-rsync \
-subversion \
-sudo \
-tcpdump \
-telnet \
-tmux \
-unar \
-unzip \
-vim-enhanced \
-wget \
-zip \
-zlib-devel
+ADD yum_basics.txt /tmp/yum_basics.txt
+RUN yum -y install $(cat /tmp/yum_basics.txt)
 
 RUN useradd sshuser
 RUN usermod -aG apache sshuser
