@@ -12,5 +12,5 @@ cd ./yourdomain.com/ ; sh ./run.sh
 时区为东八区（UTC+8），有需要可以参考以下命令自行修改Dockerfile
 
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-# 有疑问欢迎通过以下渠道反馈交流 - Welcome feedback
+# 有疑问?欢迎通过以下渠道反馈交流 - Welcome feedback
 https://github.com/huangsen365/centos7-remi-php/issues
