@@ -75,7 +75,7 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ```
 默认站点配置
 ```
-./volumes/volume_yourdomain.com/etc/httpd/conf2.d/httpd_7201_www.yourdomain.com.conf
+./volumes/volume_yourdomain.com/etc/httpd/conf2.d/httpd_XX01_www.yourdomain.com.conf
 ```
 
 # 有疑问?欢迎通过以下渠道反馈交流 - Welcome feedback
