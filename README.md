@@ -23,11 +23,21 @@ systemctl status docker
 docker run hello-world
 ```
 # 如何使用 - How to use it?
-请参考以下步骤 Please refer to below steps
+请参考以下两个方法、步骤 Please refer to below steps
+# 方法一 （直接从Docker官方公网仓库拉取，推荐）
+Docker Pull Command
+```
+docker pull huangsen365/centos7-remi-php
+```
+# 方法二 （自行构建，适合DIY自定义修改Dockerfile）
 # Step 1 - 执行以下命令构建镜像 - Build image
+```
 sh ./docker_build.sh 
+```
 # Step 2 - 执行以下命令创建容器实例 - Run container
+```
 cd ./yourdomain.com/ ; sh ./run.sh
+```
 # 注意事项
 时区为东八区（UTC+8），有需要可以参考以下命令自行修改Dockerfile
 
