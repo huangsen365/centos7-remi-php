@@ -46,11 +46,11 @@ docker pull huangsen365/centos7-remi-php
 ```
 
 # 方法二 （自行构建，适合自定义修改Dockerfile）
-# Step 1 - 执行以下命令构建镜像 - Build image
+执行以下命令构建镜像 - Build image
 ```
 sh ./docker_build.sh 
 ```
-# Step 2 - 执行以下命令创建容器实例 - Run container
+# 通过以上方法得到Docker镜像后再执行以下命令创建容器实例 - Run container
 ```
 cd ./yourdomain.com/ ; sh ./run.sh
 ```
