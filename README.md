@@ -63,13 +63,14 @@ cd /root/data1/centos7-remi-php-master/yourdomain.com/ ; sh ./run.sh
 ```
 # 注意事项
 时区为东八区（UTC+8），有需要可以参考以下命令自行修改Dockerfile
-
+```
+https://github.com/huangsen365/centos7-remi-php
+```
 默认站点配置
 ```
 ./volumes/volume_yourdomain.com/etc/httpd/conf2.d/httpd_7201_www.yourdomain.com.conf
 ```
 
-ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 # 有疑问?欢迎通过以下渠道反馈交流 - Welcome feedback
 https://github.com/huangsen365/centos7-remi-php/issues
 
