@@ -4,7 +4,6 @@ rsync -av /var/www/ /tmp/default_paths_for_docker/var/www/
 rsync -av /var/log/ /tmp/default_paths_for_docker/var/log/
 
 rsync -av /etc/httpd/conf.d/ --exclude '*' /tmp/default_paths_for_docker/etc/httpd/conf2.d/
-#rsync -av /tmp/somefiles/httpd_XX01_www.yourdomain.com.conf /tmp/default_paths_for_docker/etc/httpd/conf2.d/httpd_XX01_www.yourdomain.com.conf
 rsync -av /tmp/somefiles/httpd_XX01_www.yourdomain.com.conf /tmp/default_paths_for_docker/etc/httpd/conf2.d/httpd_XX01_www.yourdomain.com.conf_template
 rsync -av /tmp/somefiles/info.php /tmp/default_paths_for_docker/var/www/www.yourdomain.com/www/info.php
 rsync -av /tmp/somefiles/gitpull.sh /tmp/default_paths_for_docker/var/www/www.yourdomain.com/gitpull.sh
@@ -90,3 +89,5 @@ rsync -av /var/opt/remi/php73/lib/php/wsdlcache/ /tmp/default_paths_for_docker/v
 rsync -av /var/opt/remi/php74/lib/php/opcache/ /tmp/default_paths_for_docker/var/opt/remi/php74/lib/php/opcache/
 rsync -av /var/opt/remi/php74/lib/php/session/ /tmp/default_paths_for_docker/var/opt/remi/php74/lib/php/session/
 rsync -av /var/opt/remi/php74/lib/php/wsdlcache/ /tmp/default_paths_for_docker/var/opt/remi/php74/lib/php/wsdlcache/
+
+rsync -av /var/spool/cron/ /tmp/default_paths_for_docker/var/spool/cron/
