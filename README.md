@@ -25,13 +25,25 @@ docker run hello-world
 # 如何使用 - How to use it?
 请参考以下两个方法、步骤 Please refer to below steps
 # 方法一 （直接从Docker官方公共仓库拉取，推荐）
+【针对中国境内用户】
+使用Docker时需要首先下载一个官方镜像，例如 mysql、wordpress。然而由于网络原因，下载一个Docker官方镜像可能会需要很长的时间，甚至下载失败。为此，阿里云容器镜像服务ACR提供了官方的镜像站点，从而加速官方镜像的下载。
+参考引用自 https://help.aliyun.com/document_detail/60750.html
+```
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://[系统分配前缀].mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
 Docker Pull Command
 ```
 docker pull huangsen365/centos7-remi-php
 ```
-使用Docker时需要首先下载一个官方镜像，例如 mysql、wordpress。然而由于网络原因，下载一个Docker官方镜像可能会需要很长的时间，甚至下载失败。为此，阿里云容器镜像服务ACR提供了官方的镜像站点，从而加速官方镜像的下载。
 
-参考引用自 https://help.aliyun.com/document_detail/60750.html
 # 方法二 （自行构建，适合自定义修改Dockerfile）
 # Step 1 - 执行以下命令构建镜像 - Build image
 ```
