@@ -2,8 +2,8 @@ docker ps -a | grep c_
 
 if [ $? -eq 0 ]
 then
-    echo -e "\033[0;31m发现已有运行实例，请妥当操作之再重新执行本脚本!\n正在取消本次操作\033[0m"
-    echo -e "\033[0;31mFound docker containers named as c_* , please manage them properly and then rerun this script!\nAborting this action\033[0m"
+    echo -e "\033[0;31m发现已有命名为 c_* 的实例，请妥当操作之再重新执行本脚本!\n正在取消本次操作...\033[0m"
+    echo -e "\033[0;31mFound docker containers named as c_* , please manage them properly and then rerun this script!\nAborting this action...\033[0m"
     exit
 else
     echo "Not found existing docker containers named as c_* , this script will continue run in 3 seconds..."
