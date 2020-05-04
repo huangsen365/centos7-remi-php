@@ -25,10 +25,10 @@ RUN echo "export HISTTIMEFORMAT=\"%F %T \"" >> /etc/bashrc
 RUN echo "export VISUAL=\"vim\"" >> /etc/bashrc
 RUN echo "export EDITOR=\"vim\"" >> /etc/bashrc
 
-RUN rm -rf /etc/localtime
-RUN ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+# RUN rm -rf /etc/localtime
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-#RUN yum makecache fast
+# RUN yum makecache fast
 
 RUN yum -y --enablerepo=extras install centos-release-scl
 RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
