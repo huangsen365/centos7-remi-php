@@ -38,4 +38,4 @@ docker run -d \
   -p 2222:22 \
   --restart always \
   --name $cotainer_name \
-  centos7-remi-php
+  huangsen365/centos7-remi-php
