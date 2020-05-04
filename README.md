@@ -50,7 +50,7 @@ docker pull huangsen365/centos7-remi-php
 ```
 sh ./docker_build.sh 
 ```
-# 如何创建容器实例? 执行以下命令 - Run container
+# 如何运行创建容器实例? 执行以下命令 - Run container
 下载基本模板文件(包含默认站点的 Apache httpd conf 和 PHP-FPM conf 配置文件)
 ```
 mkdir -p /root/data1 /root/wget_download
