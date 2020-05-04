@@ -40,7 +40,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
-Docker Pull Command
+然后再执行以下命令 - Docker Pull Command
 ```
 docker pull huangsen365/centos7-remi-php
 ```
