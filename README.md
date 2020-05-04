@@ -56,7 +56,7 @@ sh ./docker_build.sh
 mkdir -p /root/data1
 cd /root/data1
 wget https://github.com/huangsen365/centos7-remi-php/archive/master.zip -O /root/data1/centos7-remi-php.zip
-unzip /root/data1/centos7-remi-php.zip -d /root/data1/
+yum -y install unzip ; unzip /root/data1/centos7-remi-php.zip -d /root/data1/
 ```
 执行脚本
 ```
