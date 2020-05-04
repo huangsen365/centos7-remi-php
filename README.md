@@ -5,3 +5,6 @@ centos7 remi php
 sh ./docker_build.sh 
 # Step 2 - 执行以下命令即可创建容器运行实例
 sh ./yourdomain.com/run.sh
+注意事项
+时区为东八区（UTC+8），有需要可以参考以下命令自行修改
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
