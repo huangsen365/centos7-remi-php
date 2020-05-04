@@ -11,6 +11,17 @@ https://developer.aliyun.com/mirror/docker-ce
 ```
 https://docs.docker.com/get-docker/
 ```
+方法3: 执行以下命令
+```
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+sudo yum -y makecache fast
+sudo yum install docker-ce docker-ce-cli containerd.io
+systemctl start docker
+systemctl enable docker
+systemctl status docker
+docker run hello-world
+```
 # 如何使用 - How to use it?
 请参考以下步骤 Please refer to below steps
 # Step 1 - 执行以下命令构建镜像 - Build image
