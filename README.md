@@ -21,6 +21,9 @@ https://docs.docker.com/get-docker/
 ```
 方法3: 执行以下命令（使用阿里云镜像，适合中国用户 CentOS 7 操作系统）
 ```
+参考 https://docs.docker.com/engine/install/centos/
+```
+```
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 sudo yum -y makecache fast
