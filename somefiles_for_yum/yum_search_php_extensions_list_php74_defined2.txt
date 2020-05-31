@@ -27,6 +27,7 @@ php74-php-pecl-ssh2
 php74-php-pecl-uploadprogress
 php74-php-pecl-uuid
 php74-php-pecl-xattr
+php74-php-pecl-zip
 php74-php-phpiredis
 php74-php-smbclient
 php74-php-sodium

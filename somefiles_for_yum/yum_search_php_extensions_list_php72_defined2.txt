@@ -29,6 +29,7 @@ php72-php-pecl-uploadprogress
 php72-php-pecl-uuid
 php72-php-pecl-xattr
 php72-php-pecl-xdebug
+php72-php-pecl-zip
 php72-php-phpiredis
 php72-php-smbclient
 php72-php-sodium

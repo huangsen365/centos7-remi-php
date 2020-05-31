@@ -32,6 +32,7 @@ php70-php-pecl-uploadprogress
 php70-php-pecl-uuid
 php70-php-pecl-xattr
 php70-php-pecl-xdebug
+php70-php-pecl-zip
 php70-php-phpiredis
 php70-php-smbclient
 php70-php-tidy
