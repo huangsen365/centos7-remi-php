@@ -44,6 +44,10 @@ RUN usermod -aG apache sshuser
 # RUN yum -y install ffmpeg ffmpeg-devel
 
 RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+RUN mv /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel.repo.backup
+RUN mv /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/epel-testing.repo.backup
+RUN wget -O /etc/yum.repos.d/epel.repo https://mirrors.aliyun.com/repo/epel-7.repo
+
 RUN yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 RUN yum -y install php70 php71 php72 php73 php74 php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm
 
