@@ -31,7 +31,7 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 # RUN yum makecache fast
 
 RUN yum -y --enablerepo=extras install centos-release-scl
-RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+# RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 RUN yum -y install scl-utils
 ADD yum_basics.txt /tmp/yum_basics.txt
