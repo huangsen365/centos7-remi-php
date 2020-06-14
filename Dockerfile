@@ -28,9 +28,6 @@ RUN yum -y install scl-utils
 ADD yum_basics.txt /tmp/yum_basics.txt
 RUN yum -y install $(cat /tmp/yum_basics.txt)
 
-RUN useradd sshuser
-RUN usermod -aG apache sshuser
-
 # RUN rpm -v --import https://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
 # RUN rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 # RUN yum -y install ffmpeg ffmpeg-devel
