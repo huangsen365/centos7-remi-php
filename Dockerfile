@@ -85,16 +85,7 @@ RUN yum -y install $(cat /tmp/somefiles_for_yum/yum_search_php_extensions_list_p
 
 ADD somefiles /tmp/somefiles
 
-RUN cat /tmp/somefiles/bashrc_append.txt >> /etc/bashrc
-
-#COPY vimrc_append_conf.txt /tmp
-#RUN cat /tmp/somefiles/vimrc_append_conf.txt >> /etc/vimrc
-
-#COPY mkdir_chown_chmod.sh /root/mkdir_chown_chmod.sh
-
-#COPY mkdir.sh /tmp/mkdir.sh
 RUN sh /tmp/somefiles/mkdir.sh
-#COPY rsync.sh /tmp/rsync.sh
 RUN sh /tmp/somefiles/rsync.sh
 
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php70\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php70\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php70\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php70/php-fpm.conf
