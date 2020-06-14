@@ -90,6 +90,8 @@ RUN yum -y install $(cat /tmp/somefiles_for_yum/yum_search_php_extensions_list_p
 
 ADD somefiles /tmp/somefiles
 
+RUN cat /tmp/somefiles/bashrc_append.txt >> /etc/bashrc
+
 #COPY vimrc_append_conf.txt /tmp
 #RUN cat /tmp/somefiles/vimrc_append_conf.txt >> /etc/vimrc
 
