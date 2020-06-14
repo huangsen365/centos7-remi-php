@@ -20,10 +20,7 @@ RUN yum -y makecache fast
 RUN yum -y update
 RUN yum -y install man-pages man-db man yum-utils
 
-# RUN rm -rf /etc/localtime
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-
-# RUN yum makecache fast
 
 RUN yum -y --enablerepo=extras install centos-release-scl
 
@@ -60,8 +57,6 @@ COPY php-fpm_7401_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php74/php-
 
 RUN sed -i 's/AllowOverride\ None/AllowOverride\ All/g' /etc/httpd/conf/httpd.conf
 RUN echo "IncludeOptional conf2.d/*.conf" >> /etc/httpd/conf/httpd.conf
-
-#COPY httpd_XX01_www.yourdomain.com.conf /tmp/httpd_XX01_www.yourdomain.com.conf
 
 ADD somefiles_for_yum /tmp/somefiles_for_yum
 
