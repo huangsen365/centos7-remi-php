@@ -1,3 +1,4 @@
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 useradd sshuser
 usermod -aG apache sshuser
 
