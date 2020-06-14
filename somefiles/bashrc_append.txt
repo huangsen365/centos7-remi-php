@@ -1,0 +1,4 @@
+export HISTSIZE=999999999
+export HISTTIMEFORMAT="%F %T "
+export VISUAL="vim"
+export EDITOR="vim"
