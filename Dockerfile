@@ -20,11 +20,6 @@ RUN yum -y makecache fast
 RUN yum -y update
 RUN yum -y install man-pages man-db man yum-utils
 
-RUN echo "export HISTSIZE=999999999" >> /etc/bashrc
-RUN echo "export HISTTIMEFORMAT=\"%F %T \"" >> /etc/bashrc
-RUN echo "export VISUAL=\"vim\"" >> /etc/bashrc
-RUN echo "export EDITOR=\"vim\"" >> /etc/bashrc
-
 # RUN rm -rf /etc/localtime
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
