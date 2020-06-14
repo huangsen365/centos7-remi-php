@@ -20,8 +20,6 @@ RUN yum -y makecache fast
 RUN yum -y update
 RUN yum -y install man-pages man-db man yum-utils
 
-RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-
 RUN yum -y --enablerepo=extras install centos-release-scl
 
 RUN yum -y install scl-utils
