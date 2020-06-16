@@ -70,6 +70,7 @@ sh ./docker_build.sh
 下载基本模板文件(包含默认站点的 Apache httpd conf 和 PHP-FPM conf 配置文件)
 ```
 mkdir -p /root/data1 /root/wget_download
+# mount /root/data1 if you have NAS
 yum -y install wget ; \
     wget https://github.com/huangsen365/centos7-remi-php/archive/master.zip \
     -O /root/wget_download/centos7-remi-php.zip
