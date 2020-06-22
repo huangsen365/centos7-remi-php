@@ -23,8 +23,6 @@ RUN yum -y install man-pages man-db man yum-utils
 RUN yum -y --enablerepo=extras install centos-release-scl
 
 RUN yum -y install scl-utils
-ADD yum_basics.txt /tmp/yum_basics.txt
-RUN yum -y install $(cat /tmp/yum_basics.txt)
 
 # RUN rpm -v --import https://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
 # RUN rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
@@ -34,6 +32,9 @@ RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.n
 RUN mv /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel.repo.backup \
     && mv /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/epel-testing.repo.backup \
     && wget -O /etc/yum.repos.d/epel.repo https://mirrors.aliyun.com/repo/epel-7.repo
+
+ADD yum_basics.txt /tmp/yum_basics.txt
+RUN yum -y install $(cat /tmp/yum_basics.txt)
 
 RUN yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 RUN yum -y install php70 php71 php72 php73 php74 php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm
