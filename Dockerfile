@@ -18,7 +18,7 @@ RUN sed -i 's/tsflags=nodocs/\#tsflags=nodocs/g' /etc/yum.conf
 RUN echo "ip_resolve=4" >> /etc/yum.conf
 RUN yum -y makecache fast
 RUN yum -y update
-RUN yum -y install man-pages man-db man yum-utils
+RUN yum -y install man-pages man-db man yum-utils wget
 
 RUN yum -y --enablerepo=extras install centos-release-scl
 
