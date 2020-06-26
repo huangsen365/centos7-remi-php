@@ -80,7 +80,7 @@ RUN sed -i 's/include\=\/etc\/opt\/remi\/php73\/php-fpm.d\/\*\.conf/include\=\/e
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php74\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php74\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php74\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php74/php-fpm.conf
 
 ADD somefiles_for_scripts /tmp/somefiles_for_scripts
-RUN /tmp/somefiles_for_scripts/run_scripts.sh
+RUN sh /tmp/somefiles_for_scripts/run_scripts.sh
 
 RUN yum -y update
 
