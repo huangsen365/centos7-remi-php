@@ -23,7 +23,7 @@ RUN sed -i 's/tsflags=nodocs/\#tsflags=nodocs/g' /etc/yum.conf \
     && yum -y makecache fast \
     && yum -y update \
     && yum -y install man-pages man-db man yum-utils wget \
-    && yum -y --enablerepo=extras install centos-release-scl \
+    && yum -y install --enablerepo=extras centos-release-scl \
     && yum -y install scl-utils \
     && yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
