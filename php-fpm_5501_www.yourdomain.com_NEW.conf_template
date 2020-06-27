@@ -1,0 +1,28 @@
+[www.yourdomain.com-php55]
+listen = 127.0.0.1:5501
+ 
+listen.allowed_clients = 127.0.0.1
+user = sshuser
+group = sshuser
+pm = dynamic
+pm.max_children = 50
+pm.start_servers = 5
+pm.min_spare_servers = 5
+pm.max_spare_servers = 35
+ 
+ 
+ 
+ 
+ 
+slowlog = /opt/remi/php55/root/var/log/php-fpm/www.yourdomain.com-slow.log
+ 
+ 
+ 
+ 
+ 
+ 
+php_admin_value[error_log] = /opt/remi/php55/root/var/log/php-fpm/www.yourdomain.com-error.log
+php_admin_flag[log_errors] = on
+php_value[session.save_handler] = files
+php_value[session.save_path]    = /opt/remi/php55/root/var/lib/php/session/www.yourdomain.com
+php_value[soap.wsdl_cache_dir]  = /opt/remi/php55/root/var/lib/php/wsdlcache
