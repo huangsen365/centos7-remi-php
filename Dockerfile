@@ -31,8 +31,6 @@ RUN sed -i 's/tsflags=nodocs/\#tsflags=nodocs/g' /etc/yum.conf \
 # RUN rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 # RUN yum -y install ffmpeg ffmpeg-devel
 
-# RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-
 ADD yum_basics.txt /opt/centos7-remi-php/yum_basics.txt
 RUN yum -y install $(cat /opt/centos7-remi-php/yum_basics.txt) \
     && yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm \
