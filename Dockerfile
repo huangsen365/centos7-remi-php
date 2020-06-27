@@ -34,7 +34,7 @@ ADD yum_basics.txt /opt/centos7-remi-php/yum_basics.txt
 RUN yum -y install $(cat /opt/centos7-remi-php/yum_basics.txt)
 
 RUN yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
-RUN yum -y install php70 php71 php72 php73 php74 php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm
+RUN yum -y install php56 php70 php71 php72 php73 php74 php56-php-fpm php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm
 
 COPY www_php-fpm_5600.conf /etc/opt/remi/php56/php-fpm.d/www.conf
 COPY www_php-fpm_7000.conf /etc/opt/remi/php70/php-fpm.d/www.conf
