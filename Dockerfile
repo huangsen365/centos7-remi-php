@@ -1,4 +1,5 @@
 FROM centos:7
+
 # refer to below links:
 # https://github.com/CentOS/sig-cloud-instance-images/tree/CentOS-7-x86_64/docker
 # https://github.com/CentOS/CentOS-Dockerfiles/blob/master/systemd/centos7/Dockerfile
@@ -77,10 +78,8 @@ RUN yum -y install $(cat /opt/centos7-remi-php/somefiles_for_yum/yum_search_php_
 RUN yum -y install $(cat /opt/centos7-remi-php/somefiles_for_yum/yum_search_php_extensions_list_php74_defined2.txt) --exclude="$(cat /opt/centos7-remi-php/somefiles_for_yum/yum_search_php_extensions_list_php74_defined2-exclude.txt)"
 
 ADD somefiles /opt/centos7-remi-php/somefiles
-
 RUN sh /opt/centos7-remi-php/somefiles/mkdir.sh
 RUN sh /opt/centos7-remi-php/somefiles/rsync.sh
-
 
 RUN sed -i 's/include\=\/opt\/remi\/php54\/root\/etc\/php-fpm.d\/\*\.conf/include\=\/opt\/remi\/php54\/root\/etc\/php-fpm.d\/\*\.conf\ninclude\=\/opt\/remi\/php54\/root\/etc\/php-fpm2.d\/\*\.conf/g' /opt/remi/php54/root/etc/php-fpm.conf
 RUN sed -i 's/include\=\/opt\/remi\/php55\/root\/etc\/php-fpm.d\/\*\.conf/include\=\/opt\/remi\/php55\/root\/etc\/php-fpm.d\/\*\.conf\ninclude\=\/opt\/remi\/php55\/root\/etc\/php-fpm2.d\/\*\.conf/g' /opt/remi/php55/root/etc/php-fpm.conf
