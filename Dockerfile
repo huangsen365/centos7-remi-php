@@ -14,28 +14,25 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 VOLUME [ "/sys/fs/cgroup" ]
 
-RUN sed -i 's/tsflags=nodocs/\#tsflags=nodocs/g' /etc/yum.conf
-RUN echo "ip_resolve=4" >> /etc/yum.conf
-RUN yum -y makecache fast
-RUN yum -y update
-RUN yum -y install man-pages man-db man yum-utils wget
-
-RUN yum -y --enablerepo=extras install centos-release-scl
-
-RUN yum -y install scl-utils
+RUN sed -i 's/tsflags=nodocs/\#tsflags=nodocs/g' /etc/yum.conf \
+    && echo "ip_resolve=4" >> /etc/yum.conf \
+    && yum -y makecache fast \
+    && yum -y update \
+    && yum -y install man-pages man-db man yum-utils wget \
+    && yum -y --enablerepo=extras install centos-release-scl \
+    && yum -y install scl-utils \
+    && yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 # RUN rpm -v --import https://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
 # RUN rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 # RUN yum -y install ffmpeg ffmpeg-devel
 
-RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+# RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 ADD yum_basics.txt /opt/centos7-remi-php/yum_basics.txt
-RUN yum -y install $(cat /opt/centos7-remi-php/yum_basics.txt)
-
-RUN yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
-RUN yum -y install php54 php55 php56 php70 php71 php72 php73 php74 php54-php-fpm php55-php-fpm php56-php-fpm php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm
-
+RUN yum -y install $(cat /opt/centos7-remi-php/yum_basics.txt) \
+    && yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm \
+    && yum -y install php54 php55 php56 php70 php71 php72 php73 php74 php54-php-fpm php55-php-fpm php56-php-fpm php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm
 
 COPY www_php-fpm_5400.conf /opt/remi/php54/root/etc/php-fpm.d/www.conf
 COPY www_php-fpm_5500.conf /opt/remi/php55/root/etc/php-fpm.d/www.conf
@@ -46,7 +43,6 @@ COPY www_php-fpm_7200.conf /etc/opt/remi/php72/php-fpm.d/www.conf
 COPY www_php-fpm_7300.conf /etc/opt/remi/php73/php-fpm.d/www.conf
 COPY www_php-fpm_7400.conf /etc/opt/remi/php74/php-fpm.d/www.conf
 
-
 COPY php-fpm_5401_www.yourdomain.com_NEW2.conf_template /opt/remi/php54/root/etc/php-fpm.d/php-fpm_5401_www.yourdomain.com_NEW2.conf_template
 COPY php-fpm_5501_www.yourdomain.com_NEW2.conf_template /opt/remi/php55/root/etc/php-fpm.d/php-fpm_5501_www.yourdomain.com_NEW2.conf_template
 COPY php-fpm_5601_www.yourdomain.com_NEW2.conf_template /opt/remi/php56/root/etc/php-fpm.d/php-fpm_5601_www.yourdomain.com_NEW2.conf_template
@@ -55,8 +51,6 @@ COPY php-fpm_7101_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php71/php-
 COPY php-fpm_7201_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php72/php-fpm.d/php-fpm_7201_www.yourdomain.com_NEW2.conf_template
 COPY php-fpm_7301_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php73/php-fpm.d/php-fpm_7301_www.yourdomain.com_NEW2.conf_template
 COPY php-fpm_7401_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php74/php-fpm.d/php-fpm_7401_www.yourdomain.com_NEW2.conf_template
-
-
 
 ADD somefiles_for_yum /opt/centos7-remi-php/somefiles_for_yum
 
@@ -94,8 +88,6 @@ RUN sed -i 's/include\=\/etc\/opt\/remi\/php71\/php-fpm.d\/\*\.conf/include\=\/e
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php72\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php72\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php72\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php72/php-fpm.conf
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php73\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php73\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php73\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php73/php-fpm.conf
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php74\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php74\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php74\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php74/php-fpm.conf
-
-
 
 ADD somefiles_for_scripts /opt/centos7-remi-php/somefiles_for_scripts
 # RUN sh /opt/centos7-remi-php/somefiles_for_scripts/run_scripts.sh
