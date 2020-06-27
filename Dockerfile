@@ -1,4 +1,8 @@
 FROM centos:7
+# refer to below links:
+# https://github.com/CentOS/sig-cloud-instance-images/tree/CentOS-7-x86_64/docker
+# https://github.com/CentOS/CentOS-Dockerfiles/blob/master/systemd/centos7/Dockerfile
+# https://hub.docker.com/_/centos
 
 ENV container docker
 LABEL maintainer="The CentOS Project <cloud-ops@centos.org>"
