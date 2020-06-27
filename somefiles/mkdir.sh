@@ -13,6 +13,8 @@ mkdir -p /opt/centos7-remi-php/default_paths_for_docker/etc/httpd/conf2.d
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/www/www.yourdomain.com/www
 
 
+
+
 #mkdir -p /opt/centos7-remi-php/default_paths_for_docker/opt/remi/php54/root/var/lib/php/opcache
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/opt/remi/php54/root/var/lib/php/session
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/opt/remi/php54/root/var/lib/php/wsdlcache
@@ -47,10 +49,14 @@ mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/opt/remi/php74/lib/p
 
 
 
+mkdir -p /opt/centos7-remi-php/default_paths_for_docker/opt/remi/php54/root/etc/php-fpm2.d
+mkdir -p /opt/centos7-remi-php/default_paths_for_docker/opt/remi/php55/root/etc/php-fpm2.d
+mkdir -p /opt/centos7-remi-php/default_paths_for_docker/opt/remi/php56/root/etc/php-fpm2.d
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/etc/opt/remi/php70/php-fpm2.d
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/etc/opt/remi/php71/php-fpm2.d
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/etc/opt/remi/php72/php-fpm2.d
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/etc/opt/remi/php73/php-fpm2.d
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/etc/opt/remi/php74/php-fpm2.d
+
 
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/spool/cron

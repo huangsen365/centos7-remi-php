@@ -82,11 +82,17 @@ ADD somefiles /opt/centos7-remi-php/somefiles
 RUN sh /opt/centos7-remi-php/somefiles/mkdir.sh
 RUN sh /opt/centos7-remi-php/somefiles/rsync.sh
 
+
+RUN sed -i 's/include\=\/opt\/remi\/php54\/root\/etc\/php-fpm.d\/\*\.conf/include\=\/opt\/remi\/php54\/root\/etc\/php-fpm.d\/\*\.conf\ninclude\=\/opt\/remi\/php54\/root\/etc\/php-fpm2.d\/\*\.conf/g' /opt/remi/php54/root/etc/php-fpm.conf
+RUN sed -i 's/include\=\/opt\/remi\/php55\/root\/etc\/php-fpm.d\/\*\.conf/include\=\/opt\/remi\/php55\/root\/etc\/php-fpm.d\/\*\.conf\ninclude\=\/opt\/remi\/php55\/root\/etc\/php-fpm2.d\/\*\.conf/g' /opt/remi/php55/root/etc/php-fpm.conf
+RUN sed -i 's/include\=\/opt\/remi\/php56\/root\/etc\/php-fpm.d\/\*\.conf/include\=\/opt\/remi\/php56\/root\/etc\/php-fpm.d\/\*\.conf\ninclude\=\/opt\/remi\/php56\/root\/etc\/php-fpm2.d\/\*\.conf/g' /opt/remi/php56/root/etc/php-fpm.conf
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php70\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php70\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php70\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php70/php-fpm.conf
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php71\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php71\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php71\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php71/php-fpm.conf
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php72\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php72\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php72\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php72/php-fpm.conf
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php73\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php73\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php73\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php73/php-fpm.conf
 RUN sed -i 's/include\=\/etc\/opt\/remi\/php74\/php-fpm.d\/\*\.conf/include\=\/etc\/opt\/remi\/php74\/php-fpm.d\/\*\.conf\ninclude\=\/etc\/opt\/remi\/php74\/php-fpm2.d\/\*\.conf/g' /etc/opt/remi/php74/php-fpm.conf
+
+
 
 ADD somefiles_for_scripts /opt/centos7-remi-php/somefiles_for_scripts
 # RUN sh /opt/centos7-remi-php/somefiles_for_scripts/run_scripts.sh

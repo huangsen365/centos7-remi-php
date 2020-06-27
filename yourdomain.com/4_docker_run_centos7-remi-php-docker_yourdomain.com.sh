@@ -26,11 +26,17 @@ docker run -d \
   -v $current_dir/volumes/volume_yourdomain.com/var/$log_dir_name:/var/log \
   -v $current_dir/volumes/volume_yourdomain.com/var/spool/$cron_dir_name:/var/spool/cron \
   -v $current_dir/volumes/volume_yourdomain.com/etc/httpd/conf2.d:/etc/httpd/conf2.d \
+  -v $current_dir/volumes/volume_yourdomain.com/opt/remi/php54/root/var/lib/php:/opt/remi/php54/root/var/lib/php \
+  -v $current_dir/volumes/volume_yourdomain.com/opt/remi/php55/root/var/lib/php:/opt/remi/php55/root/var/lib/php \
+  -v $current_dir/volumes/volume_yourdomain.com/opt/remi/php56/root/var/lib/php:/opt/remi/php56/root/var/lib/php \
   -v $current_dir/volumes/volume_yourdomain.com/var/opt/remi/php70/lib/php:/var/opt/remi/php70/lib/php \
   -v $current_dir/volumes/volume_yourdomain.com/var/opt/remi/php71/lib/php:/var/opt/remi/php71/lib/php \
   -v $current_dir/volumes/volume_yourdomain.com/var/opt/remi/php72/lib/php:/var/opt/remi/php72/lib/php \
   -v $current_dir/volumes/volume_yourdomain.com/var/opt/remi/php73/lib/php:/var/opt/remi/php73/lib/php \
   -v $current_dir/volumes/volume_yourdomain.com/var/opt/remi/php74/lib/php:/var/opt/remi/php74/lib/php \
+  -v $current_dir/volumes/volume_yourdomain.com/opt/remi/php54/root/etc/php-fpm2.d:/opt/remi/php54/root/etc/php-fpm2.d \
+  -v $current_dir/volumes/volume_yourdomain.com/opt/remi/php55/root/etc/php-fpm2.d:/opt/remi/php55/root/etc/php-fpm2.d \
+  -v $current_dir/volumes/volume_yourdomain.com/opt/remi/php56/root/etc/php-fpm2.d:/opt/remi/php56/root/etc/php-fpm2.d \
   -v $current_dir/volumes/volume_yourdomain.com/etc/opt/remi/php70/php-fpm2.d:/etc/opt/remi/php70/php-fpm2.d \
   -v $current_dir/volumes/volume_yourdomain.com/etc/opt/remi/php71/php-fpm2.d:/etc/opt/remi/php71/php-fpm2.d \
   -v $current_dir/volumes/volume_yourdomain.com/etc/opt/remi/php72/php-fpm2.d:/etc/opt/remi/php72/php-fpm2.d \
