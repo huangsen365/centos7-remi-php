@@ -12,6 +12,19 @@ mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/log
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/etc/httpd/conf2.d
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/www/www.yourdomain.com/www
 
+
+#mkdir -p /opt/centos7-remi-php/default_paths_for_docker/opt/remi/php54/root/var/lib/php/opcache
+mkdir -p /opt/centos7-remi-php/default_paths_for_docker/opt/remi/php54/root/var/lib/php/session
+mkdir -p /opt/centos7-remi-php/default_paths_for_docker/opt/remi/php54/root/var/lib/php/wsdlcache
+
+#mkdir -p /opt/centos7-remi-php/default_paths_for_docker/opt/remi/php55/root/var/lib/php/opcache
+mkdir -p /opt/centos7-remi-php/default_paths_for_docker/opt/remi/php55/root/var/lib/php/session
+mkdir -p /opt/centos7-remi-php/default_paths_for_docker/opt/remi/php55/root/var/lib/php/wsdlcache
+
+#mkdir -p /opt/centos7-remi-php/default_paths_for_docker/opt/remi/php56/root/var/lib/php/opcache
+mkdir -p /opt/centos7-remi-php/default_paths_for_docker/opt/remi/php56/root/var/lib/php/session
+mkdir -p /opt/centos7-remi-php/default_paths_for_docker/opt/remi/php56/root/var/lib/php/wsdlcache
+
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/opt/remi/php70/lib/php/opcache
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/opt/remi/php70/lib/php/session
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/opt/remi/php70/lib/php/wsdlcache
@@ -31,6 +44,8 @@ mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/opt/remi/php73/lib/p
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/opt/remi/php74/lib/php/opcache
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/opt/remi/php74/lib/php/session
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/opt/remi/php74/lib/php/wsdlcache
+
+
 
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/etc/opt/remi/php70/php-fpm2.d
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/etc/opt/remi/php71/php-fpm2.d
