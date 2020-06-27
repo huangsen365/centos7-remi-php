@@ -36,23 +36,26 @@ RUN yum -y install $(cat /opt/centos7-remi-php/yum_basics.txt)
 RUN yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 RUN yum -y install php54 php55 php56 php70 php71 php72 php73 php74 php54-php-fpm php55-php-fpm php56-php-fpm php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm
 
-COPY www_php-fpm_5400.conf /etc/opt/remi/php54/php-fpm.d/www.conf
-COPY www_php-fpm_5500.conf /etc/opt/remi/php55/php-fpm.d/www.conf
-COPY www_php-fpm_5600.conf /etc/opt/remi/php56/php-fpm.d/www.conf
+
+COPY www_php-fpm_5400.conf /opt/remi/php54/root/etc/php-fpm.d/www.conf
+COPY www_php-fpm_5500.conf /opt/remi/php55/root/etc/php-fpm.d/www.conf
+COPY www_php-fpm_5600.conf /opt/remi/php56/root/etc/php-fpm.d/www.conf
 COPY www_php-fpm_7000.conf /etc/opt/remi/php70/php-fpm.d/www.conf
 COPY www_php-fpm_7100.conf /etc/opt/remi/php71/php-fpm.d/www.conf
 COPY www_php-fpm_7200.conf /etc/opt/remi/php72/php-fpm.d/www.conf
 COPY www_php-fpm_7300.conf /etc/opt/remi/php73/php-fpm.d/www.conf
 COPY www_php-fpm_7400.conf /etc/opt/remi/php74/php-fpm.d/www.conf
 
-COPY php-fpm_5401_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php54/php-fpm.d/php-fpm_5401_www.yourdomain.com_NEW2.conf_template
-COPY php-fpm_5501_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php55/php-fpm.d/php-fpm_5501_www.yourdomain.com_NEW2.conf_template
-COPY php-fpm_5601_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php56/php-fpm.d/php-fpm_5601_www.yourdomain.com_NEW2.conf_template
+
+COPY php-fpm_5401_www.yourdomain.com_NEW2.conf_template /opt/remi/php54/root/etc/php-fpm.d/php-fpm_5401_www.yourdomain.com_NEW2.conf_template
+COPY php-fpm_5501_www.yourdomain.com_NEW2.conf_template /opt/remi/php55/root/etc/php-fpm.d/php-fpm_5501_www.yourdomain.com_NEW2.conf_template
+COPY php-fpm_5601_www.yourdomain.com_NEW2.conf_template /opt/remi/php56/root/etc/php-fpm.d/php-fpm_5601_www.yourdomain.com_NEW2.conf_template
 COPY php-fpm_7001_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php70/php-fpm.d/php-fpm_7001_www.yourdomain.com_NEW2.conf_template
 COPY php-fpm_7101_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php71/php-fpm.d/php-fpm_7101_www.yourdomain.com_NEW2.conf_template
 COPY php-fpm_7201_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php72/php-fpm.d/php-fpm_7201_www.yourdomain.com_NEW2.conf_template
 COPY php-fpm_7301_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php73/php-fpm.d/php-fpm_7301_www.yourdomain.com_NEW2.conf_template
 COPY php-fpm_7401_www.yourdomain.com_NEW2.conf_template /etc/opt/remi/php74/php-fpm.d/php-fpm_7401_www.yourdomain.com_NEW2.conf_template
+
 
 
 ADD somefiles_for_yum /opt/centos7-remi-php/somefiles_for_yum
