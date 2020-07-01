@@ -98,7 +98,7 @@ ADD somefiles_for_scripts /opt/centos7-remi-php/somefiles_for_scripts
 
 RUN yum -y update
 
-RUN systemctl enable httpd php74-php-fpm
+RUN systemctl enable httpd php74-php-fpm sshd
 
 EXPOSE 80 443
 
