@@ -1,3 +1,4 @@
+bind-utils
 bzip2
 cronie
 git
