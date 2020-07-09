@@ -79,7 +79,7 @@ After created /root/data1 and mounted the NAS, then execute below command:
 ```
 rsync -av /root/data_template/* /root/data1/
 ```
-在第1个节点主节点执行脚本以下
+在第1个节点主节点执行脚本以下（或：首次执行）
 ```
 cd /root/data1/centos7-remi-php-master/yourdomain.com/ ; sh ./run.sh
 ```
