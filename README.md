@@ -79,9 +79,13 @@ After created /root/data1 and mounted the NAS, then execute below command:
 ```
 rsync -av /root/data_template/* /root/data1/
 ```
-执行脚本
+在第1个节点主节点执行脚本以下
 ```
 cd /root/data1/centos7-remi-php-master/yourdomain.com/ ; sh ./run.sh
+```
+在第2个节点或更多其它节点执行脚本以下
+```
+cd /root/data1/centos7-remi-php-master/yourdomain.com/ ; sh ./4_docker_run_centos7-remi-php-docker_yourdomain.com.sh
 ```
 # 注意事项
 容器默认时区为东八区（UTC+8），有需要可以参考以下命令自行修改Dockerfile
