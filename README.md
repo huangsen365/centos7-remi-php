@@ -75,6 +75,10 @@ yum -y install wget ; \
     -O /root/wget_download/centos7-remi-php.zip
 yum -y install unzip ; unzip /root/wget_download/centos7-remi-php.zip -d /root/data_template/
 ```
+After created /root/data1 and mounted the NAS, then execute below command:
+```
+rsync -av /root/data_template/ /root/data1/
+```
 执行脚本
 ```
 cd /root/data1/centos7-remi-php-master/yourdomain.com/ ; sh ./run.sh
