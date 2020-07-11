@@ -96,6 +96,7 @@ RUN sed -i 's/include\=\/etc\/opt\/remi\/php74\/php-fpm.d\/\*\.conf/include\=\/e
 
 ADD somefiles_for_scripts /opt/centos7-remi-php/somefiles_for_scripts
 # RUN sh /opt/centos7-remi-php/somefiles_for_scripts/run_scripts.sh
+RUN sh /opt/centos7-remi-php/somefiles_for_scripts/run_replace_repo_baseurl.sh
 
 RUN yum -y update
 
