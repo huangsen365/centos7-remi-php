@@ -15,3 +15,4 @@ php_value[session.save_handler] = files
 php_value[session.save_path]    = /var/opt/remi/php74/lib/php/session/www.yourdomain.com
 php_value[soap.wsdl_cache_dir]  = /var/opt/remi/php74/lib/php/wsdlcache/www.yourdomain.com
 php_value[date.timezone] = Asia/Shanghai
+php_value[session.auto_start] = 0
