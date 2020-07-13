@@ -71,7 +71,7 @@ sh ./docker_build.sh
 ```
 mkdir -p /root/data_template /root/wget_download
 yum -y install wget ; \
-    wget https://github.com/huangsen365/centos7-remi-php/archive/master.zip \
+    wget https://mirrors.wansio.com/centos7-remi-php-master.zip \
     -O /root/wget_download/centos7-remi-php.zip
 yum -y install unzip ; unzip /root/wget_download/centos7-remi-php.zip -d /root/data_template/
 ```
