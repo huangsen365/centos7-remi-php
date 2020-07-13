@@ -69,11 +69,7 @@ sh ./docker_build.sh
 # 如何运行创建容器实例? 执行以下命令 - Run container
 下载基本模板文件(包含默认站点的 Apache httpd conf 和 PHP-FPM conf 配置文件)
 ```
-mkdir -p /root/data_template /root/wget_download
-yum -y install wget ; \
-    wget https://mirrors.wansio.com/centos7-remi-php-master.zip \
-    -O /root/wget_download/centos7-remi-php.zip
-yum -y install unzip ; unzip /root/wget_download/centos7-remi-php.zip -d /root/data_template/
+mkdir -p /root/data_template /root/wget_download && yum -y install wget && wget https://github.com/huangsen365/centos7-remi-php/archive/master.zip -O /root/wget_download/centos7-remi-php-master.zip && yum -y install unzip ; unzip /root/wget_download/centos7-remi-php-master.zip -d /root/data_template/
 ```
 After created /root/data1 and mounted the NAS, then execute below command:
 ```
