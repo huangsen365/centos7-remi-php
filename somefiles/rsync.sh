@@ -15,6 +15,7 @@ rsync -av /opt/centos7-remi-php/somefiles/httpd_XX01_www.yourdomain.com.conf /op
 rsync -av /opt/centos7-remi-php/somefiles/info.php /opt/centos7-remi-php/default_paths_for_docker/var/www/www.yourdomain.com/www/info.php
 rsync -av /opt/centos7-remi-php/somefiles/gitpull.sh /opt/centos7-remi-php/default_paths_for_docker/var/www/www.yourdomain.com/gitpull.sh
 rsync -av /opt/centos7-remi-php/somefiles/gitpull.php /opt/centos7-remi-php/default_paths_for_docker/var/www/www.yourdomain.com/www/gitpull.php
+rsync -av /opt/centos7-remi-php/somefiles/.gitignore_template /opt/centos7-remi-php/default_paths_for_docker/var/www/www.yourdomain.com/.gitignore_template
 rsync -av /opt/centos7-remi-php/somefiles/mkdir_chown_chmod.sh /opt/centos7-remi-php/default_paths_for_docker/root/mkdir_chown_chmod.sh
 
 chown -R 1000:1000 /opt/centos7-remi-php/default_paths_for_docker/var/www/www.yourdomain.com
