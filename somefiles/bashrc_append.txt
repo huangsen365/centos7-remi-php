@@ -1,4 +1,5 @@
 # Refer to https://raw.githubusercontent.com/huangsen365/centos7-remi-php/master/somefiles/bashrc_append.txt
+# Refer to https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/bashrc_append.txt
 export HISTSIZE=999999999
 export HISTTIMEFORMAT="%F %T "
 export VISUAL="vim"
