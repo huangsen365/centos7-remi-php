@@ -25,7 +25,7 @@ https://docs.docker.com/get-docker/
 ```
 ```
 sudo yum install -y yum-utils
-sudo yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+sudo yum-config-manager --add-repo https://download-docker-com.wansio.com/linux/centos/docker-ce.repo
 sudo yum -y makecache fast
 sudo yum install -y docker-ce docker-ce-cli containerd.io
 systemctl start docker

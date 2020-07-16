@@ -27,7 +27,7 @@ RUN sed -i 's/tsflags=nodocs/\#tsflags=nodocs/g' /etc/yum.conf \
     && yum -y install man-pages man-db man yum-utils wget \
     && yum -y install --enablerepo=extras centos-release-scl \
     && yum -y install scl-utils \
-    && yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+    && yum -y install https://dl-fedoraproject-org.wansio.com/pub/epel/epel-release-latest-7.noarch.rpm
 
 # RUN rpm -v --import https://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
 # RUN rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
@@ -35,7 +35,7 @@ RUN sed -i 's/tsflags=nodocs/\#tsflags=nodocs/g' /etc/yum.conf \
 
 ADD yum_basics.txt /opt/centos7-remi-php/yum_basics.txt
 RUN yum -y install $(cat /opt/centos7-remi-php/yum_basics.txt) \
-    && yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm \
+    && yum -y install https://rpms-remirepo-net.wansio.com/enterprise/remi-release-7.rpm \
     && yum -y install php54 php55 php56 \
     php54-php-fpm php55-php-fpm php56-php-fpm \
     php70 php71 php72 php73 php74 \
