@@ -7,6 +7,8 @@ httpd
 iftop
 logrotate
 mariadb-server
+mod_security
+mod_security_crs
 mod_ssl
 mtr
 mysql
