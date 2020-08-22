@@ -1,1 +1,6 @@
-<?php phpinfo(); ?>
+<?php 
+
+#phpinfo(); 
+echo "will be deleted soon";
+
+?>
