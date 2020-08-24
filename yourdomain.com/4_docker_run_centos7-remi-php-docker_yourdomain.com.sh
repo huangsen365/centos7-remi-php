@@ -22,7 +22,7 @@ docker run -d \
   -v $current_dir/volumes/volume_yourdomain.com/home/sshuser/.ssh:/home/sshuser/.ssh \
   -v $current_dir/volumes/volume_yourdomain.com/$root_dir_name:/root \
   -v $current_dir/volumes/volume_yourdomain.com/root/.ssh:/root/.ssh \
-  -v $current_dir/volumes/volume_yourdomain.com/var/www:/var/www \
+  -v $current_dir/volumes/volume_yourdomain.com/var/www:/var/www:ro \
   -v $current_dir/volumes/volume_yourdomain.com/var/$log_dir_name:/var/log \
   -v $current_dir/volumes/volume_yourdomain.com/var/spool/$cron_dir_name:/var/spool/cron \
   -v $current_dir/volumes/volume_yourdomain.com/etc/httpd/conf2.d:/etc/httpd/conf2.d \
