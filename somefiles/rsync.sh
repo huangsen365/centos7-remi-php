@@ -6,6 +6,7 @@ sed -i 's/AllowOverride\ None/AllowOverride\ All/g' /etc/httpd/conf/httpd.conf
 echo "IncludeOptional conf2.d/*.conf" >> /etc/httpd/conf/httpd.conf
 sed -i 's/SecResponseBodyAccess\ Off/SecResponseBodyAccess\ On/g' /etc/httpd/conf.d/mod_security.conf
 sed -i 's/SecAuditEngine\ RelevantOnly/SecAuditEngine\ On/g' /etc/httpd/conf.d/mod_security.conf
+sed -i 's/SecRuleEngine\ On/SecRuleEngine\ DetectionOnly/g' /etc/httpd/conf.d/mod_security.conf
 
 rsync -av /home/ /opt/centos7-remi-php/default_paths_for_docker/home/
 rsync -av /root/ /opt/centos7-remi-php/default_paths_for_docker/root/
