@@ -28,5 +28,5 @@ php_value[session.save_path]    = /opt/remi/php55/root/var/lib/php/session/www.y
 php_value[soap.wsdl_cache_dir]  = /opt/remi/php55/root/var/lib/php/wsdlcache/www.yourdomain.com
 php_value[date.timezone] = Asia/Shanghai
 php_value[session.auto_start] = 0
-php_admin_value[disable_functions] = phpinfo,passthru,exec,system,chroot,scandir,chgrp,chown,shell_exec,proc_open,proc_get_status,ini_alter,ini_alter,ini_restore,dl,pfsockopen,openlog,syslog,readlink,symlink,popepassthru,stream_socket_server,get_current_user,leak,putenv,popen,opendir
+php_admin_value[disable_functions] = phpinfo,passthru,system,chroot,scandir,chgrp,chown,shell_exec,proc_open,proc_get_status,ini_alter,ini_alter,ini_restore,dl,pfsockopen,openlog,syslog,readlink,symlink,popepassthru,stream_socket_server,get_current_user,leak,putenv,popen,opendir
 php_value[upload_max_filesize] = 16M
