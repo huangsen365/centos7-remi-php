@@ -1,5 +1,6 @@
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-useradd -s /sbin/nologin sshuser
+#useradd -s /sbin/nologin sshuser
+useradd sshuser
 usermod -aG apache sshuser
 
 sed -i 's/AllowOverride\ None/AllowOverride\ All/g' /etc/httpd/conf/httpd.conf
