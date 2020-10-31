@@ -5,7 +5,7 @@
 # wget https://raw.githubusercontent.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
 # wget https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
 $git_pull_command = "sh /var/www/" . $_SERVER['SERVER_NAME'] . "/gitpull.sh";
-print $git_pull_command;
+print("Running git pull command for this website: ". $_SERVER['SERVER_NAME']);
 $output1 = shell_exec("git config --get remote.origin.url");
 $output2 = shell_exec($git_pull_command);
 echo '<pre>';
