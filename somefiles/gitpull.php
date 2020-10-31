@@ -6,10 +6,11 @@
 # wget https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
 $git_pull_command = "sh /var/www/" . $_SERVER['SERVER_NAME'] . "/gitpull.sh";
 print $git_pull_command;
-exec("git config --get remote.origin.url", $output);
-exec($git_pull_command, $output);
+$output1 = shell_exec("git config --get remote.origin.url");
+$output2 = shell_exec($git_pull_command, $output);
 echo '<pre>';
-print_r($output);
+print_r($output1);
+print_r($output2);
 echo '</pre>';
 
 echo "Updated time is " . date("Y/m/d H:i:s") . "<br>";
