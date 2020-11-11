@@ -44,8 +44,10 @@ docker run -d \
   -v $current_dir/volumes/volume_yourdomain.com/etc/opt/remi/php74/php-fpm2.d:/etc/opt/remi/php74/php-fpm2.d \
   -p 80:80 \
   -p 8080:8080 \
+  -p 8088:8088 \
   -p 443:443 \
   -p 8443:8443 \
+  -p 8843:8843 \
   -p 2222:22 \
   --restart always \
   --name $cotainer_name \
