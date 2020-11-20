@@ -8,9 +8,12 @@ $git_pull_command = "sh /var/www/" . $_SERVER['SERVER_NAME'] . "/gitpull.sh";
 print("Running git pull command for this website: ". $_SERVER['SERVER_NAME']);
 $output1 = shell_exec("git config --get remote.origin.url");
 $output2 = shell_exec($git_pull_command);
+$output3 = shell_exec("git branch");
 echo '<pre>';
 print_r($output1);
 print_r($output2);
+print_r("Running 'git branch' ... ");
+print_r($output3);
 echo '</pre>';
 
 echo "Updated time is " . date("Y/m/d H:i:s") . "<br>";
