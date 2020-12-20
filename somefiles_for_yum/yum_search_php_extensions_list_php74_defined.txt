@@ -14,6 +14,7 @@ php74-php-json
 php74-php-ldap
 php74-php-mbstring
 php74-php-mysqlnd
+php74-php-oci8
 php74-php-odbc
 php74-php-opcache
 php74-php-pdo
