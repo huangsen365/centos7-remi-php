@@ -29,6 +29,7 @@ RUN sed -i 's/tsflags=nodocs/\#tsflags=nodocs/g' /etc/yum.conf \
     && yum -y install scl-utils \
     && yum -y install https://dl-fedoraproject-org.wansio.com/pub/epel/epel-release-latest-7.noarch.rpm
 
+# maybe make caches for this repo in the future?
 RUN rpm -v --import https://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
 RUN rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 RUN yum -y install ffmpeg ffmpeg-devel
