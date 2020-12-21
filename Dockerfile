@@ -7,7 +7,7 @@ FROM centos:7
 # https://hub.docker.com/r/centos/systemd/
 
 ENV container docker
-ENV LD_LIBRARY_PATH=/usr/lib/oracle/21/client64/lib:$LD_LIBRARY_PATH
+ENV LD_LIBRARY_PATH=/usr/lib/oracle/21/client64/lib
 
 LABEL maintainer="The CentOS Project <cloud-ops@centos.org>"
 
