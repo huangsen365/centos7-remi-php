@@ -51,7 +51,8 @@ RUN yum -y install $(cat /opt/centos7-remi-php/yum_basics.txt) \
 # Installation of Oracle extensions for PHP - Remi's RPM repository - Blog
 # https://blog.remirepo.net/post/2020/05/18/Installation-of-Oracle-extensions-for-PHP
 # requires libaio
-RUN rpm -Uvh https://download.oracle.com/otn_software/linux/instantclient/211000/oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm
+# RUN rpm -Uvh https://download.oracle.com/otn_software/linux/instantclient/211000/oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm
+RUN rpm -Uvh https://raw.githubusercontent.com/huangsen365/centos7-remi-php/master/somefiles/oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm
 
 
 
