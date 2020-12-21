@@ -35,7 +35,7 @@ RUN sed -i 's/tsflags=nodocs/\#tsflags=nodocs/g' /etc/yum.conf \
 # RUN rpm -v --import https://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
 #RUN rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 RUN rpm -v --import https://raw.githubusercontent.com/huangsen365/centos7-remi-php/master/somefiles/RPM-GPG-KEY-nux.ro
-RUN rpm -Uvh https://raw.githubusercontent.com/huangsen365/centos7-remi-php/master/somefiles/nux-dextop-release-0-5.el7.nux.noarch.rpm
+RUN rpm -Uvh https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/nux-dextop-release-0-5.el7.nux.noarch.rpm
 RUN yum -y install ffmpeg ffmpeg-devel
 
 ADD yum_basics.txt /opt/centos7-remi-php/yum_basics.txt
@@ -52,7 +52,7 @@ RUN yum -y install $(cat /opt/centos7-remi-php/yum_basics.txt) \
 # https://blog.remirepo.net/post/2020/05/18/Installation-of-Oracle-extensions-for-PHP
 # requires libaio
 # RUN rpm -Uvh https://download.oracle.com/otn_software/linux/instantclient/211000/oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm
-RUN rpm -Uvh https://raw.githubusercontent.com/huangsen365/centos7-remi-php/master/somefiles/oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm
+RUN rpm -Uvh https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm
 
 
 
