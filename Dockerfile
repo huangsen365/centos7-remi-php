@@ -106,6 +106,10 @@ RUN yum -y update
 
 RUN systemctl enable httpd php74-php-fpm sshd crond
 
+# Installation of Oracle extensions for PHP - Remi's RPM repository - Blog
+# https://blog.remirepo.net/post/2020/05/18/Installation-of-Oracle-extensions-for-PHP
+RUN rpm -Uvh https://download.oracle.com/otn_software/linux/instantclient/211000/oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm
+
 EXPOSE 80 443
 
 CMD ["/usr/sbin/init"]
