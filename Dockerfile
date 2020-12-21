@@ -7,6 +7,8 @@ FROM centos:7
 # https://hub.docker.com/r/centos/systemd/
 
 ENV container docker
+ENV LD_LIBRARY_PATH=/usr/lib/oracle/21/client64/lib:$LD_LIBRARY_PATH
+
 LABEL maintainer="The CentOS Project <cloud-ops@centos.org>"
 
 RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done); \
