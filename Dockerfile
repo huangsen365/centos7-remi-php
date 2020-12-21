@@ -36,6 +36,10 @@ RUN sed -i 's/tsflags=nodocs/\#tsflags=nodocs/g' /etc/yum.conf \
 # RUN rpm -Uvh https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 # RUN yum -y install ffmpeg ffmpeg-devel
 
+# Installation of Oracle extensions for PHP - Remi's RPM repository - Blog
+# https://blog.remirepo.net/post/2020/05/18/Installation-of-Oracle-extensions-for-PHP
+RUN rpm -Uvh https://download.oracle.com/otn_software/linux/instantclient/211000/oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm
+
 ADD yum_basics.txt /opt/centos7-remi-php/yum_basics.txt
 RUN yum -y install $(cat /opt/centos7-remi-php/yum_basics.txt) \
     && yum -y install https://rpms-remirepo-net.wansio.com/enterprise/remi-release-7.rpm \
@@ -105,10 +109,6 @@ RUN sh /opt/centos7-remi-php/somefiles_for_scripts/mark_version.sh
 RUN yum -y update
 
 RUN systemctl enable httpd php74-php-fpm sshd crond
-
-# Installation of Oracle extensions for PHP - Remi's RPM repository - Blog
-# https://blog.remirepo.net/post/2020/05/18/Installation-of-Oracle-extensions-for-PHP
-RUN rpm -Uvh https://download.oracle.com/otn_software/linux/instantclient/211000/oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm
 
 EXPOSE 80 443
 
