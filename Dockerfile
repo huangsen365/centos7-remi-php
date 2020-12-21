@@ -47,14 +47,12 @@ RUN yum -y install $(cat /opt/centos7-remi-php/yum_basics.txt) \
     php70 php71 php72 php73 php74 \
     php70-php-fpm php71-php-fpm php72-php-fpm php73-php-fpm php74-php-fpm
 
-
 # Installation of Oracle extensions for PHP - Remi's RPM repository - Blog
 # https://blog.remirepo.net/post/2020/05/18/Installation-of-Oracle-extensions-for-PHP
 # requires libaio
 # RUN rpm -Uvh https://download.oracle.com/otn_software/linux/instantclient/211000/oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm
 RUN rpm -Uvh https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/oracle-instantclient-basic-21.1.0.0.0-1.x86_64.rpm
-
-
+COPY somefiles/override.conf /etc/systemd/system/php74-php-fpm.service.d/override.conf
 
 COPY www_php-fpm_5400.conf /opt/remi/php54/root/etc/php-fpm.d/www.conf
 COPY www_php-fpm_5500.conf /opt/remi/php55/root/etc/php-fpm.d/www.conf
