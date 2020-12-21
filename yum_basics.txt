@@ -5,6 +5,7 @@ git
 htop
 httpd
 iftop
+libaio
 logrotate
 mariadb-server
 mod_security
