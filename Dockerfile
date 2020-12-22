@@ -117,5 +117,5 @@ RUN yum -y update
 RUN systemctl enable httpd php74-php-fpm sshd crond
 
 EXPOSE 80 443
-
+WORKDIR /root
 CMD ["/usr/sbin/init"]
