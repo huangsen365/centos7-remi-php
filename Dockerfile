@@ -33,7 +33,7 @@ RUN sed -i 's/tsflags=nodocs/\#tsflags=nodocs/g' /etc/yum.conf \
 
 # maybe make caches for this repo in the future?
 # RUN rpm -v --import https://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
-#RUN rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+# RUN rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 RUN rpm -v --import https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/RPM-GPG-KEY-nux.ro
 RUN rpm -Uvh https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/nux-dextop-release-0-5.el7.nux.noarch.rpm
 RUN yum -y install ffmpeg ffmpeg-devel
