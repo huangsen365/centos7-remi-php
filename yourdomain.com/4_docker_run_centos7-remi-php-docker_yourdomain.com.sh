@@ -10,8 +10,8 @@ cotainer_name=c_$date_and_hostname
 #cp -pr $current_dir/volumes/volume_yourdomain.com/home $current_dir/volumes/volume_yourdomain.com/$home_dir_name
 #cp -pr $current_dir/volumes/volume_yourdomain.com/root $current_dir/volumes/volume_yourdomain.com/$root_dir_name
 #cp -pr $current_dir/volumes/volume_yourdomain.com/var/log $current_dir/volumes/volume_yourdomain.com/var/$log_dir_name
-rsync -av --exclude=.ssh $current_dir/volumes/volume_yourdomain.com/home/ $current_dir/volumes/volume_yourdomain.com/$home_dir_name/
-rsync -av --exclude=.ssh $current_dir/volumes/volume_yourdomain.com/root/ $current_dir/volumes/volume_yourdomain.com/$root_dir_name/
+rsync -av --exclude= '.ssh' $current_dir/volumes/volume_yourdomain.com/home/ $current_dir/volumes/volume_yourdomain.com/$home_dir_name/
+rsync -av --exclude= '.ssh' --exclude 'shared' $current_dir/volumes/volume_yourdomain.com/root/ $current_dir/volumes/volume_yourdomain.com/$root_dir_name/
 rsync -av $current_dir/volumes/volume_yourdomain.com/var/log/ $current_dir/volumes/volume_yourdomain.com/var/$log_dir_name/
 rsync -av $current_dir/volumes/volume_yourdomain.com/var/spool/cron/ $current_dir/volumes/volume_yourdomain.com/var/spool/$cron_dir_name/
 
@@ -22,6 +22,7 @@ docker run -d \
   -v $current_dir/volumes/volume_yourdomain.com/home/sshuser/.ssh:/home/sshuser/.ssh \
   -v $current_dir/volumes/volume_yourdomain.com/$root_dir_name:/root \
   -v $current_dir/volumes/volume_yourdomain.com/root/.ssh:/root/.ssh \
+  -v $current_dir/volumes/volume_yourdomain.com/root/shared:/root/shared \
   -v $current_dir/volumes/volume_yourdomain.com/var/www:/var/www \
   -v $current_dir/volumes/volume_yourdomain.com/var/$log_dir_name:/var/log \
   -v $current_dir/volumes/volume_yourdomain.com/var/spool/$cron_dir_name:/var/spool/cron \
