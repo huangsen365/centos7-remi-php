@@ -1,15 +1,19 @@
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/home
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/home/sshuser/.ssh
+mkdir -p /opt/centos7-remi-php/default_paths_for_docker/home/sshuser/dotfiles
 chmod 700 /opt/centos7-remi-php/default_paths_for_docker/home/sshuser/.ssh
 chown 1000:1000 /opt/centos7-remi-php/default_paths_for_docker/home/sshuser/.ssh
+chown 1000:1000 /opt/centos7-remi-php/default_paths_for_docker/home/sshuser/dotfiles
 #touch /opt/centos7-remi-php/default_paths_for_docker/home/sshuser/.gitconfig
 #chown 1000:1000 /opt/centos7-remi-php/default_paths_for_docker/home/sshuser/.gitconfig
 
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/root
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/root/.ssh
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/root/shared
+mkdir -p /opt/centos7-remi-php/default_paths_for_docker/root/dotfiles
 chmod 700 /opt/centos7-remi-php/default_paths_for_docker/root/.ssh
-chmod 755 /opt/centos7-remi-php/default_paths_for_docker/root/shared
+#chmod 755 /opt/centos7-remi-php/default_paths_for_docker/root/shared
+#chmod 755 /opt/centos7-remi-php/default_paths_for_docker/root/dotfiles
 #touch /opt/centos7-remi-php/default_paths_for_docker/root/.gitconfig
 
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/www
