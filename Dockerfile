@@ -24,6 +24,7 @@ VOLUME [ "/sys/fs/cgroup" ]
 
 RUN sed -i 's/tsflags=nodocs/\#tsflags=nodocs/g' /etc/yum.conf \
     && echo "ip_resolve=4" >> /etc/yum.conf \
+    && sed -i 's/keepcache=0/keepcache=1/g' /etc/yum.conf \
     && yum -y makecache fast \
     && yum -y update \
     && yum -y install man-pages man-db man yum-utils wget \
@@ -112,7 +113,7 @@ ADD somefiles_for_scripts /opt/centos7-remi-php/somefiles_for_scripts
 # RUN sh /opt/centos7-remi-php/somefiles_for_scripts/run_replace_repo_baseurl.sh
 RUN sh /opt/centos7-remi-php/somefiles_for_scripts/mark_version.sh
 
-RUN yum -y update
+RUN yum -y update && yum clean all
 
 RUN systemctl enable httpd php74-php-fpm sshd crond
 
