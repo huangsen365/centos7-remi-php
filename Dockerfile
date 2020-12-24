@@ -113,7 +113,7 @@ ADD somefiles_for_scripts /opt/centos7-remi-php/somefiles_for_scripts
 # RUN sh /opt/centos7-remi-php/somefiles_for_scripts/run_replace_repo_baseurl.sh
 RUN sh /opt/centos7-remi-php/somefiles_for_scripts/mark_version.sh
 
-RUN yum -y update && yum clean all
+RUN yum -y update && # yum clean all
 
 RUN systemctl enable httpd php74-php-fpm sshd crond
 
