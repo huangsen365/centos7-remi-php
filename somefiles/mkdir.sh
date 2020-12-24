@@ -18,6 +18,7 @@ chmod 700 /opt/centos7-remi-php/default_paths_for_docker/root/.ssh
 
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/www
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/log
+mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/cache/yum
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/etc/httpd/conf2.d
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/var/www/www.yourdomain.com/www
 

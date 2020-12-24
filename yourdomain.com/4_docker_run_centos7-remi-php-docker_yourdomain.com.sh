@@ -26,6 +26,7 @@ docker run -d \
   -v $current_dir/volumes/volume_yourdomain.com/root/shared:/root/shared \
   -v $current_dir/volumes/volume_yourdomain.com/root/dotfiles:/root/dotfiles \
   -v $current_dir/volumes/volume_yourdomain.com/var/www:/var/www \
+  -v $current_dir/volumes/volume_yourdomain.com/var/cache/yum:/var/cache/yum \
   -v $current_dir/volumes/volume_yourdomain.com/var/$log_dir_name:/var/log \
   -v $current_dir/volumes/volume_yourdomain.com/var/spool/$cron_dir_name:/var/spool/cron \
   -v $current_dir/volumes/volume_yourdomain.com/etc/httpd/conf2.d:/etc/httpd/conf2.d \
