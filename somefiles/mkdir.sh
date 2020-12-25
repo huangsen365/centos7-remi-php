@@ -4,6 +4,8 @@ mkdir -p /opt/centos7-remi-php/default_paths_for_docker/home/sshuser/dotfiles
 chmod 700 /opt/centos7-remi-php/default_paths_for_docker/home/sshuser/.ssh
 chown 1000:1000 /opt/centos7-remi-php/default_paths_for_docker/home/sshuser/.ssh
 chown 1000:1000 /opt/centos7-remi-php/default_paths_for_docker/home/sshuser/dotfiles
+echo "ln -sf ./dotfiles/.gitconfig .gitconfig" > /opt/centos7-remi-php/default_paths_for_docker/home/sshuser/ln_gitconfig.sh
+chown 1000:1000 /opt/centos7-remi-php/default_paths_for_docker/home/sshuser/ln_gitconfig.sh
 #touch /opt/centos7-remi-php/default_paths_for_docker/home/sshuser/.gitconfig
 #chown 1000:1000 /opt/centos7-remi-php/default_paths_for_docker/home/sshuser/.gitconfig
 
@@ -12,6 +14,7 @@ mkdir -p /opt/centos7-remi-php/default_paths_for_docker/root/.ssh
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/root/shared
 mkdir -p /opt/centos7-remi-php/default_paths_for_docker/root/dotfiles
 chmod 700 /opt/centos7-remi-php/default_paths_for_docker/root/.ssh
+echo "ln -sf ./dotfiles/.gitconfig .gitconfig" > /opt/centos7-remi-php/default_paths_for_docker/root/ln_gitconfig.sh
 #chmod 755 /opt/centos7-remi-php/default_paths_for_docker/root/shared
 #chmod 755 /opt/centos7-remi-php/default_paths_for_docker/root/dotfiles
 #touch /opt/centos7-remi-php/default_paths_for_docker/root/.gitconfig
