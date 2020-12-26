@@ -1,3 +1,5 @@
+# grep githubusercontent /etc/bashrc ; if [ $? -eq 0 ]; then echo 'no need to append for bashrc file' ; else curl -fsSL https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/bashrc_append.txt >> /etc/bashrc ; fi
+
 # Refer to https://raw.githubusercontent.com/huangsen365/centos7-remi-php/master/somefiles/bashrc_append.txt
 # Refer to https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/bashrc_append.txt
 export HISTSIZE=999999999
