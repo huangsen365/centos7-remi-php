@@ -1,3 +1,4 @@
+# next time maybe do checking if container is already running or not...
 cd /root/"$1"/centos7-remi-php-master/yourdomain.com
 current_dir=$(pwd)
 #httpd_log_dir_name=httpd_$(date +%Y-%m-%d_%H%M%S)_$(hostname)
