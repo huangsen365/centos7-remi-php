@@ -1,4 +1,5 @@
-cd /root/"$1"/centos7-remi-php-master/yourdomain.com
+#cd /root/"$1"/centos7-remi-php-master/yourdomain.com
+cd ${REMIPHPPATH}/yourdomain.com
 
 docker ps -a | grep c_
 
