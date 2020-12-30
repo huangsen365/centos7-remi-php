@@ -15,7 +15,7 @@ cotainer_name=c_$date_and_hostname
 rsync -av --exclude= '.ssh' --exclude 'dotfiles' $current_dir/volumes/volume_yourdomain.com/home/ $current_dir/volumes/volume_yourdomain.com/$home_dir_name/
 rsync -av --exclude= '.ssh' --exclude 'dotfiles' --exclude 'shared' $current_dir/volumes/volume_yourdomain.com/root/ $current_dir/volumes/volume_yourdomain.com/$root_dir_name/
 rsync -av $current_dir/volumes/volume_yourdomain.com/var/log/ $current_dir/volumes/volume_yourdomain.com/var/$log_dir_name/
-rsync -av $current_dir/volumes/volume_yourdomain.com/var/spool/cron/ $current_dir/volumes/volume_yourdomain.com/var/spool/$cron_dir_name/
+#rsync -av $current_dir/volumes/volume_yourdomain.com/var/spool/cron/ $current_dir/volumes/volume_yourdomain.com/var/spool/$cron_dir_name/
 
 docker run -d \
   --privileged \
@@ -30,7 +30,7 @@ docker run -d \
   -v $current_dir/volumes/volume_yourdomain.com/var/www:/var/www \
   -v $current_dir/volumes/volume_yourdomain.com/var/cache/yum:/var/cache/yum \
   -v $current_dir/volumes/volume_yourdomain.com/var/$log_dir_name:/var/log \
-  -v $current_dir/volumes/volume_yourdomain.com/var/spool/$cron_dir_name:/var/spool/cron \
+  -v $current_dir/volumes/volume_yourdomain.com/var/spool/cron:/var/spool/cron \
   -v $current_dir/volumes/volume_yourdomain.com/etc/httpd/conf2.d:/etc/httpd/conf2.d \
   -v $current_dir/volumes/volume_yourdomain.com/opt/remi/php54/root/var/lib/php:/opt/remi/php54/root/var/lib/php \
   -v $current_dir/volumes/volume_yourdomain.com/opt/remi/php55/root/var/lib/php:/opt/remi/php55/root/var/lib/php \

@@ -115,7 +115,9 @@ RUN sh /opt/centos7-remi-php/somefiles_for_scripts/mark_version.sh
 
 RUN yum -y update # && yum clean all
 
-RUN systemctl enable httpd php74-php-fpm sshd crond
+#RUN systemctl enable httpd php74-php-fpm sshd crond
+RUN systemctl enable httpd php74-php-fpm sshd
+RUN systemctl disable crond
 
 EXPOSE 80 443
 WORKDIR /root
