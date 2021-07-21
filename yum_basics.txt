@@ -18,6 +18,7 @@ nginx
 openssh-clients
 openssh-server
 redis
+redis-cli
 rsync
 subversion
 sudo
