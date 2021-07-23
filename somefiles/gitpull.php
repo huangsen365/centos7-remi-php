@@ -2,6 +2,7 @@
 <?php
 
 /* Please add 'gitpull.php' into the .gitignore file */
+# https://github.com/huangsen365/centos7-remi-php/blob/master/somefiles/gitpull.php
 # wget https://raw.githubusercontent.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
 # wget https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
 $git_pull_command = "sh /var/www/" . $_SERVER['SERVER_NAME'] . "/gitpull.sh";
