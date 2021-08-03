@@ -1,4 +1,9 @@
 #cd /root/"$1"/centos7-remi-php-master/yourdomain.com
+
+if [ -n "$REMIPHPPATH" ]
+then
+    echo "REMIPHPPATH is : "${REMIPHPPATH}
+
 cd ${REMIPHPPATH}/yourdomain.com
 
 docker ps -a | grep c_
@@ -23,3 +28,8 @@ sh ./3_docker_stop_and_rm_mycentos.sh
 sh ./4_docker_run_centos7-remi-php-docker_yourdomain.com.sh
 #sh ./5_docker_exec_mkdir_chown_chmod.sh
 sh ./6_docker_exec_it_bash.sh
+
+else
+    echo "REMIPHPPATH is not set...exiting..."
+    exit
+fi
