@@ -12,8 +12,8 @@ cotainer_name=c_$date_and_hostname
 #cp -pr $current_dir/volumes/volume_yourdomain.com/home $current_dir/volumes/volume_yourdomain.com/$home_dir_name
 #cp -pr $current_dir/volumes/volume_yourdomain.com/root $current_dir/volumes/volume_yourdomain.com/$root_dir_name
 #cp -pr $current_dir/volumes/volume_yourdomain.com/var/log $current_dir/volumes/volume_yourdomain.com/var/$log_dir_name
-rsync -av --exclude= '.ssh' --exclude 'dotfiles' $current_dir/volumes/volume_yourdomain.com/home/ $current_dir/volumes/volume_yourdomain.com/$home_dir_name/
-rsync -av --exclude= '.ssh' --exclude 'dotfiles' --exclude 'shared' $current_dir/volumes/volume_yourdomain.com/root/ $current_dir/volumes/volume_yourdomain.com/$root_dir_name/
+rsync -av --exclude '/.ssh' --exclude '/dotfiles' $current_dir/volumes/volume_yourdomain.com/home/sshuser/ $current_dir/volumes/volume_yourdomain.com/$home_dir_name/sshuser/
+rsync -av --exclude '/.ssh' --exclude '/dotfiles' --exclude '/shared' $current_dir/volumes/volume_yourdomain.com/root/ $current_dir/volumes/volume_yourdomain.com/$root_dir_name/
 rsync -av $current_dir/volumes/volume_yourdomain.com/var/log/ $current_dir/volumes/volume_yourdomain.com/var/$log_dir_name/
 rsync -av $current_dir/volumes/volume_yourdomain.com/var/spool/cron/ $current_dir/volumes/volume_yourdomain.com/var/spool/$cron_dir_name/
 
