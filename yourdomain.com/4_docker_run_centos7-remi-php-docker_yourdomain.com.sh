@@ -4,9 +4,11 @@ current_dir=$(pwd)
 #httpd_log_dir_name=httpd_$(date +%Y-%m-%d_%H%M%S)_$(hostname)
 #cp -pr $current_dir/volumes/volume_yourdomain.com/var/log/httpd $current_dir/volumes/volume_yourdomain.com/var/log/$httpd_log_dir_name
 date_and_hostname=$(date +%Y-%m-%d_%H%M%S)_$(hostname)
+date_and_hostname_onlydate=$(date +%Y-%m-%d)
 home_dir_name=home_$date_and_hostname
 root_dir_name=root_$date_and_hostname
-log_dir_name=log_$date_and_hostname
+#log_dir_name=log_$date_and_hostname
+log_dir_name=log_$date_and_hostname_onlydate
 cron_dir_name=cron_$date_and_hostname
 cotainer_name=c_$date_and_hostname
 #cp -pr $current_dir/volumes/volume_yourdomain.com/home $current_dir/volumes/volume_yourdomain.com/$home_dir_name
