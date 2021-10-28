@@ -7,8 +7,8 @@ date_and_hostname=$(date +%Y-%m-%d_%H%M%S)_$(hostname)
 date_and_hostname_onlydate=$(date +%Y-%m-%d)
 home_dir_name=home_$date_and_hostname
 root_dir_name=root_$date_and_hostname
-#log_dir_name=log_$date_and_hostname
-log_dir_name=log_$date_and_hostname_onlydate
+log_dir_name=log_$date_and_hostname
+#log_dir_name=log_$date_and_hostname_onlydate
 cron_dir_name=cron_$date_and_hostname
 cotainer_name=c_$date_and_hostname
 #cp -pr $current_dir/volumes/volume_yourdomain.com/home $current_dir/volumes/volume_yourdomain.com/$home_dir_name
@@ -32,7 +32,7 @@ docker run -d \
   -v $current_dir/volumes/volume_yourdomain.com/var/www:/var/www \
   -v $current_dir/volumes/volume_yourdomain.com/var/cache/yum:/var/cache/yum \
   -v $current_dir/volumes/volume_yourdomain.com/var/$log_dir_name:/var/log \
-  -v $current_dir/volumes/volume_yourdomain.com/var/spool/cron:/var/spool/cron \
+  -v $current_dir/volumes/volume_yourdomain.com/var/spool/$cron_dir_name:/var/spool/cron \
   -v $current_dir/volumes/volume_yourdomain.com/etc/httpd/conf2.d:/etc/httpd/conf2.d \
   -v $current_dir/volumes/volume_yourdomain.com/opt/remi/php54/root/var/lib/php:/opt/remi/php54/root/var/lib/php \
   -v $current_dir/volumes/volume_yourdomain.com/opt/remi/php55/root/var/lib/php:/opt/remi/php55/root/var/lib/php \
