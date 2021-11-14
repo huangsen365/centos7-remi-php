@@ -23,6 +23,12 @@ echo "Today is " . date("l") . "<br>";
 echo "<a target='_blank' href='" . $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['SERVER_NAME'] . "'>" . $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['SERVER_NAME'] . "</a><br>";
 ?>
 </p>
+
+<!-- 本脚本免费开源，代码精简易用，若开发者在执行gitpull动作拉取更新代码过程中遇到 bug ，请尝试自行修复或者联系本作者。 -->
+<!-- 以下 img 标签是本脚本的原作者为了避免手机号码被各种蜘蛛扫描到被骚扰电话致电而使用 base64 编码来呈现图片格式。 -->
+<!-- 实现原理请参考   https://www.baidu.com/s?wd=base64%20%E5%9B%BE%E7%89%87%20img    -->
+<!-- 如认为不需要作者协助，也可以自行删掉本 img 标签，谢谢谅解！    -->
+
 <img src='data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAM8AAAAVCAIAAABuRi1BAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
 jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASOSURBVGhD7ZixbSsxDIa9iue4JQx4CTdZwb3b
 zJAB3LhxYcCNGzcpHuA1MsIT+VMSSVFnJy9x8AAFf3HHkyjq/u945yz+jL/x96w/ou31fTU09AQN
