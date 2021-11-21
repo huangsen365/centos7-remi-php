@@ -1,3 +1,5 @@
+<!-- 本脚本免费开源，代码精简易用，若开发者在执行gitpull动作拉取更新代码过程中遇到 bug ，请尝试自行修复或者联系本作者。黄祯荣 手机号码 15899557011 -->
+
 <p>
 <?php
 
@@ -24,31 +26,4 @@ echo "<a target='_blank' href='" . $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER
 ?>
 </p>
 
-<!-- 本脚本免费开源，代码精简易用，若开发者在执行gitpull动作拉取更新代码过程中遇到 bug ，请尝试自行修复或者联系本作者。 -->
-<!-- 以下 img 标签是本脚本的原作者为了避免手机号码被各种蜘蛛扫描到被骚扰电话致电而使用 base64 编码来呈现图片格式。 -->
-<!-- 实现原理请参考   https://www.baidu.com/s?wd=base64%20%E5%9B%BE%E7%89%87%20img    -->
-<!-- 如认为不需要作者协助，也可以自行删掉本 img 标签，谢谢谅解！    -->
-
-<img src='data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAM8AAAAVCAIAAABuRi1BAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
-jwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASOSURBVGhD7ZixbSsxDIa9iue4JQx4CTdZwb3b
-zJAB3LhxYcCNGzcpHuA1MsIT+VMSSVFnJy9x8AAFf3HHkyjq/u945yz+jL/x96w/ou31fTU09AQN
-2oaep/+ets3xY3l+scGX9eFjsf+YLjo49PtytO2m/cfi8LatkdXr9W3ZBhttz7dkMBnP4+edToik
-wYvjzsVF4Yozwf1tfc05O0qFBQNSAZfTYn/aqGyPMKpS5blDD+j7adte3iZuLV2YvpG2vK6N93ob
-744WxQACRVdiU/HgvpqGOnRflTb76N+mI9/6SOGNrr2NTsnOKZGHq9Q/fJJQwocBq+N6xSutdVtf
-EuUzq6ADBbTJMWXDQm2vKgVQB81B3uB4U39SX+1tCD6g0JKZ3uagrwZ3elskwNTpbVUJLBeB6qLS
-7ZJMqWVWi6bX9rxa7FeLw6qUPaVTJWSQYdBRRlZd6tW6qSgYJg+DIpUEWp45fl0tXYTVbqcXDPU9
-b9Lqyqe+eyLaSDN8m6BQRYue79FPE3l3vreRUL+vfKZZzt6NovVBDPO0OZ7Ycpi6OdKxqYSNx1Uk
-pIchDIbJO8FWdWmgxlN0PeF2wmBPXdo0QFb6haJmFYVO3H2ZavIqWJWnQKrORxCXOh+nTal0XHwq
-0HjzqCChvTPs2frCzs3Sht4AdHCsK9GRMjIMpuOv0wbCuE5TA5pfmh5up7PHniLaSC1SqQjmr4GJ
-nZDvvOVhxja2xE+XFc0U0EZqXlVyKQTFQq8lZLgBpzV21KqQVB4SXXYprwIX0QYpFxHpApEMPge2
-mW6Xu2AYTMdfpk0ja5Kj/jK92U43GCn6lZDvLDDKdzDCIgl+HHdwPT36PCv6oLnu8FtV/8iQRVWf
-cGXU01Y8q6HNLp3L41MeQMeut+HUPwlzS2eFP5iMQtqKFAQl7u6w5qAch8F0HCbvraiFMfD6GbSx
-2A+56bv0W4/vKbmCW9/c3Gpwoc0mcRJfZSdAoR1pPtEsGf/e21raOOfyeFqGzamorZYjd4DrO4Ev
-HqocbyseA9cdcPXbiAWwwqCbEuZxQVJ5XfLpr9BGMs+3eFYEd8UhRVs2xo8XIed07I+xtG3wvxic
-dmhLb/DpgnrqJVLU2+qmOM6naReEYINOCmYEg2cjdWt9GqnvBExNlOAgr2KMd0Ibc7iEwZL8bjDJ
-UWgSqtc06Udpy0iJ1JYkrkpUtOVTm0rFlYLeYGhLIg7kv3cd2hgXU6pRpYo0XVRvQ0LgSDyZ9pan
-8EhFG8c11kho5oqcE+mDOjtXXl7aXf1abEVTGlNrMEoeB/NcEirU/xlBhIk3T0K59BO06XtdKVHO
-KfhkgEZHpkhfURnyMBWxPnnalHyDgc36TaohyONzDVmFNjdFUZgz17k11W4jvJarOHW7EBer2D/w
-BJXx+rXoUdN5iqNhsJM8DBbFfKPFssTlcDudPfZUaSveEwq4s865wp83j9TSVpSpjSdWX3m6KSMa
-0/KURyp0pAVCbctBttNEhbmrfCm/bXGja/32AeugPNSV621DQz+oQdvQ8zRoG3qeBm1Dz9L76i+5
-7ZIIVtTu7QAAAABJRU5ErkJggg==' />
+<!-- 本脚本免费开源，代码精简易用，若开发者在执行gitpull动作拉取更新代码过程中遇到 bug ，请尝试自行修复或者联系本作者。黄祯荣 手机号码 15899557011 -->
