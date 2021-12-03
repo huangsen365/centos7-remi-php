@@ -11,8 +11,6 @@ GitHub 项目地址 - https://github.com/huangsen365/centos7-remi-php
 
 Docker Hub 项目地址 - https://hub.docker.com/r/huangsen365/centos7-remi-php
 
-技术支持（联系电话）: 15899557011
-
 # 前提: 安装Docker环境 - Dependency
 方法1 (Linux): docker-ce镜像-docker-ce下载地址-docker-ce安装教程-阿里巴巴开源镜像站
 ```
