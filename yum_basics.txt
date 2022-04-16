@@ -29,5 +29,6 @@ unar
 unzip
 vim-enhanced
 wget
+whois
 zip
 zlib-devel
