@@ -28,7 +28,7 @@ print_r($output3);
 echo '</pre>';
 
 echo "<button type='button' style='height:50px;width:200px' onclick='location.reload(true)'>git pull</button><br>";
-echo "Updated time is " . date("Y/m/d H:i:s O") . "<br><br>";
+echo date("Y/m/d H:i:s O") . "<br><br>";
 echo "Today is " . date("l") . "<br>";
 
 echo "<a target='_blank' href='" . $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['SERVER_NAME'] . "'>" . $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['SERVER_NAME'] . "</a><br>";
