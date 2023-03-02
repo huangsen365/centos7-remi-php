@@ -9,7 +9,7 @@ function myFunction() {
   document.getElementById('myBtn').textContent = 'git pull';
 }
 </script>
-
+<title><?php echo 'git pull - ' . $_SERVER['SERVER_NAME']; ?></title>
 </head>
 
 <body onload="myFunction()">
