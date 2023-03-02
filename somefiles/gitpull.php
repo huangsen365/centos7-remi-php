@@ -44,7 +44,7 @@ echo '</pre>';
 
 echo "<button id='myBtn' type='button' style='height:50px;width:200px' onclick='document.getElementById(\"myBtn\").textContent = \"Please wait...\";document.getElementById(\"myBtn\").disabled = true;location.reload(true);'>git pull</button><br>";
 echo date("Y/m/d H:i:s O") . "<br><br>";
-echo "Today is " . date("l") . "<br>";
+echo "Today is " . date("l") . ".<br>";
 
 echo "<a target='_blank' href='" . $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['SERVER_NAME'] . "'>" . $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['SERVER_NAME'] . "</a><br>";
 ?>
