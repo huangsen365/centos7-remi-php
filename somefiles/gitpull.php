@@ -26,7 +26,9 @@ function myFunction() {
 # 项目地址 https://github.com/huangsen365/centos7-remi-php/blob/master/somefiles/gitpull.php
 # wget https://raw.githubusercontent.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
 # wget https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
-$git_pull_command = "sh /var/www/" . $_SERVER['SERVER_NAME'] . "/gitpull.sh";
+#$git_pull_command = "sh /var/www/" . $_SERVER['SERVER_NAME'] . "/gitpull.sh";
+$git_pull_command = "cd /var/www/" . $_SERVER['SERVER_NAME'] . " && git pull 2>&1";
+
 # print("git pull - ". $_SERVER['SERVER_NAME']);
 
 # check if php function shell_exec is enabled or not, if not then print out the error message to suggest enable it in correspoding conf file under folder : /etc/opt/remi/php74/php-fpm2.d
