@@ -14,6 +14,11 @@
       span.style.display = 'none';
     }
   </script>
+  <style>
+    body {
+      font-size: larger;
+    }
+  </style>
   <title><?php echo 'git pull - ' . $_SERVER['SERVER_NAME']; ?></title>
 </head>
 
@@ -49,7 +54,7 @@
     print_r($output3);
     echo '</pre>';
 
-    echo "<button id='myBtn' type='button' style='height:50px;width:200px' onclick='document.getElementById(\"myBtn\").textContent = \"Please wait...\";document.getElementById(\"myBtn\").disabled = true;hideSpan();location.reload(true);'>git pull</button><br>";
+    echo "<button id='myBtn' type='button' style='height:50px;width:220px' onclick='document.getElementById(\"myBtn\").textContent = \"Please wait...\";document.getElementById(\"myBtn\").disabled = true;hideSpan();location.reload(true);'>git pull</button><br>";
     echo "<span id='datetimeinfo'>" . date("Y/m/d H:i:s O") . "</span><br><br>";
     echo "Today is " . date("l") . ".<br>";
 
