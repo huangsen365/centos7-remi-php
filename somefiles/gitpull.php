@@ -3,8 +3,10 @@
 <head>
 
   <script>
+    
     // 模板提供商（云计算服务器运维）: https://www.wansio.com
     // 本脚本免费开源，代码精简易用，若开发者在执行gitpull动作拉取更新代码过程中遇到 bug ，请尝试自行修复或者联系项目作者。项目链接为 https://github.com/huangsen365/centos7-remi-php/blob/master/somefiles/gitpull.php
+    
     function myFunction() {
       //alert("Page is loaded");
       //document.getElementById('myBtn').disabled = false;
