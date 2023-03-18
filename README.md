@@ -1,6 +1,25 @@
 # 模板提供商（云计算服务器运维）: https://www.wansio.com
 # centos7-remi-php
-CentOS 7 Remi PHP Docker Image 容器镜像
+
+此Dockerfile基于CentOS 7创建了一个镜像，它包含了多个版本的PHP（从5.4到7.4）以及PHP扩展。这个镜像旨在提供一个开发或生产环境，可以为多个不同的PHP版本提供支持。镜像还包括FFMPEG、FFMPEG开发库、Oracle Instant Client基本库以及一些必要的系统工具。
+
+这个Dockerfile的主要步骤如下：
+
+设置环境变量和标签。
+清理和优化systemd服务。
+配置YUM仓库。
+安装基本系统工具和额外的CentOS软件包。
+启用EPEL和Nux Dextop仓库并安装FFMPEG。
+安装不同版本的PHP和PHP-FPM。
+安装Oracle Instant Client基本库。
+配置PHP-FPM服务，并为每个PHP版本提供相应的配置文件。
+为每个PHP版本安装指定的扩展。
+创建必要的目录和设置权限。
+请注意，在使用此Dockerfile时，可能需要根据实际需求对其进行修改。例如，您可能需要更新系统包、PHP版本或扩展。如果您有特定的需求，请根据需要进行调整。
+
+另外，这个Dockerfile涉及到大量的软件包安装，因此构建过程可能需要一段时间。在构建完成后，您可以使用生成的镜像来运行基于多个PHP版本的应用程序。
+
+# CentOS 7 Remi PHP Docker Image 容器镜像
 
 OS 操作系统: CentOS 7
 
