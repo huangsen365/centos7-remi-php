@@ -44,9 +44,14 @@
         # php_admin_value[disable_functions] = ***
 
         $output1 = shell_exec("git config --get remote.origin.url");
+        $output1b = str_replace("git@", "https://", $output1);
+        $output1c = str_replace(":", "/", $output1b);
+        $output1d = str_replace("https///", "https://", $output1c);
+        #$output1d = str_replace(["git@", ":"], ["https://", "/"], $output1);
         $output2 = shell_exec($git_pull_command);
         $output3 = shell_exec("git branch");
         echo '<pre>';
+        print_r($output1d);
         print_r($output1);
         print_r($output2);
         print_r("git branch: ");
