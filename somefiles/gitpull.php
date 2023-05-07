@@ -63,6 +63,7 @@
             #$output1d = str_replace(["git@", ":"], ["https://", "/"], $output1);
             $output2 = shell_exec($git_pull_command);
             $output3 = shell_exec("git branch");
+            echo "<button id='myBtn' type='button' style='height:50px;width:220px' onclick='document.getElementById(\"myBtn\").textContent = \"Please wait...\";document.getElementById(\"myBtn\").disabled = true;hideSpan();location.reload(true);'>git pull</button><br>";
             echo '<pre>';
             print_r($output1d);
             print_r($output1);
@@ -70,11 +71,8 @@
             print_r("git branch: ");
             print_r($output3);
             echo '</pre>';
-
-            echo "<button id='myBtn' type='button' style='height:50px;width:220px' onclick='document.getElementById(\"myBtn\").textContent = \"Please wait...\";document.getElementById(\"myBtn\").disabled = true;hideSpan();location.reload(true);'>git pull</button><br>";
-            echo "<span id='datetimeinfo'>" . date("Y/m/d H:i:s O") . "</span><br><br>";
+            echo "<span id='datetimeinfo'>" . date("Y/m/d H:i:s O") . "</span><br>";
             echo "Today is " . date("l") . ".<br>";
-
             echo "<a target='_blank' href='" . $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['SERVER_NAME'] . "'>" . $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['SERVER_NAME'] . "</a><br>";
         } else {
             // 服务器名称无效，显示错误信息或终止操作
