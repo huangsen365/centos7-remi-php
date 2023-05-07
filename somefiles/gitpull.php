@@ -31,38 +31,55 @@
     <p>
         <?php
 
-        /* Please add 'gitpull.php' into the .gitignore file */
-        # 项目地址 https://github.com/huangsen365/centos7-remi-php/blob/master/somefiles/gitpull.php
-        # wget https://raw.githubusercontent.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
-        # wget https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
-        #$git_pull_command = "sh /var/www/" . $_SERVER['SERVER_NAME'] . "/gitpull.sh";
-        $git_pull_command = "cd /var/www/" . $_SERVER['SERVER_NAME'] . " && git pull 2>&1";
+        function isValidDomainName($domain)
+        {
+            $pattern = "/^(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}\.?|localhost)$/i";
+            return preg_match($pattern, $domain) === 1;
+        }
 
-        # print("git pull - ". $_SERVER['SERVER_NAME']);
+        $server_name = $_SERVER['SERVER_NAME'];
 
-        # check if php function shell_exec is enabled or not, if not then print out the error message to suggest enable it in correspoding conf file under folder : /etc/opt/remi/php74/php-fpm2.d
-        # php_admin_value[disable_functions] = ***
+        if (isValidDomainName($server_name)) {
+            // 服务器名称有效，执行后续操作
 
-        $output1 = shell_exec("git config --get remote.origin.url");
-        $output1b = str_replace("git@", "https://", $output1);
-        $output1c = str_replace(":", "/", $output1b);
-        $output1d = str_replace("https///", "https://", $output1c);
-        #$output1d = str_replace(["git@", ":"], ["https://", "/"], $output1);
-        $output2 = shell_exec($git_pull_command);
-        $output3 = shell_exec("git branch");
-        echo '<pre>';
-        print_r($output1d);
-        print_r($output1);
-        print_r($output2);
-        print_r("git branch: ");
-        print_r($output3);
-        echo '</pre>';
 
-        echo "<button id='myBtn' type='button' style='height:50px;width:220px' onclick='document.getElementById(\"myBtn\").textContent = \"Please wait...\";document.getElementById(\"myBtn\").disabled = true;hideSpan();location.reload(true);'>git pull</button><br>";
-        echo "<span id='datetimeinfo'>" . date("Y/m/d H:i:s O") . "</span><br><br>";
-        echo "Today is " . date("l") . ".<br>";
 
-        echo "<a target='_blank' href='" . $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['SERVER_NAME'] . "'>" . $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['SERVER_NAME'] . "</a><br>";
+            /* Please add 'gitpull.php' into the .gitignore file */
+            # 项目地址 https://github.com/huangsen365/centos7-remi-php/blob/master/somefiles/gitpull.php
+            # wget https://raw.githubusercontent.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
+            # wget https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
+            #$git_pull_command = "sh /var/www/" . $_SERVER['SERVER_NAME'] . "/gitpull.sh";
+            $git_pull_command = "cd /var/www/" . $_SERVER['SERVER_NAME'] . " && git pull 2>&1";
+
+            # print("git pull - ". $_SERVER['SERVER_NAME']);
+
+            # check if php function shell_exec is enabled or not, if not then print out the error message to suggest enable it in correspoding conf file under folder : /etc/opt/remi/php74/php-fpm2.d
+            # php_admin_value[disable_functions] = ***
+
+            $output1 = shell_exec("git config --get remote.origin.url");
+            $output1b = str_replace("git@", "https://", $output1);
+            $output1c = str_replace(":", "/", $output1b);
+            $output1d = str_replace("https///", "https://", $output1c);
+            #$output1d = str_replace(["git@", ":"], ["https://", "/"], $output1);
+            $output2 = shell_exec($git_pull_command);
+            $output3 = shell_exec("git branch");
+            echo '<pre>';
+            print_r($output1d);
+            print_r($output1);
+            print_r($output2);
+            print_r("git branch: ");
+            print_r($output3);
+            echo '</pre>';
+
+            echo "<button id='myBtn' type='button' style='height:50px;width:220px' onclick='document.getElementById(\"myBtn\").textContent = \"Please wait...\";document.getElementById(\"myBtn\").disabled = true;hideSpan();location.reload(true);'>git pull</button><br>";
+            echo "<span id='datetimeinfo'>" . date("Y/m/d H:i:s O") . "</span><br><br>";
+            echo "Today is " . date("l") . ".<br>";
+
+            echo "<a target='_blank' href='" . $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['SERVER_NAME'] . "'>" . $_SERVER['REQUEST_SCHEME'] . "://" . $_SERVER['SERVER_NAME'] . "</a><br>";
+        } else {
+            // 服务器名称无效，显示错误信息或终止操作
+            die('Invalid server name');
+        }
         ?>
     </p>
 </body>
