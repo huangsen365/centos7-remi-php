@@ -8,7 +8,7 @@
 //
 // 模板提供商（云计算服务器运维）: https://www.wansio.com
 //
-// # 加速链接（推荐，采用阿里云DCDN全站加速 - 全球区域加速 - https://help.aliyun.com/document_detail/65086.html
+// # 加速链接（推荐，采用阿里云DCDN全站加速 - 全球区域加速 - 参考文档 https://help.aliyun.com/document_detail/65086.html
 // https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php
 // wget https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
 //
