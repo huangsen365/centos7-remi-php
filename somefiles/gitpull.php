@@ -14,6 +14,7 @@
 //
 // # 原始链接（有梯子效果会更好）
 // https://github.com/huangsen365/centos7-remi-php/blob/master/somefiles/gitpull.php
+// https://raw.githubusercontent.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php
 // wget https://raw.githubusercontent.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
 //
 // 本脚本免费开源，代码精简易用，若开发者在执行gitpull动作拉取更新代码过程中遇到 bug ，请尝试自行修复或者联系项目作者。项目链接为 https://github.com/huangsen365/centos7-remi-php/blob/master/somefiles/gitpull.php
