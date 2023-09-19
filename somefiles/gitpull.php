@@ -56,7 +56,9 @@
             print_r($output1d);
             print_r($output1);
             print_r($output2);
+            echo "\n";
             print_r("git branch: ");
+            echo "\n";
             print_r($output3);
             echo '</pre>';
             echo "<span id='datetimeinfo'>" . date("Y/m/d H:i:s O") . "</span><br>";
