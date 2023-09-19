@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8">
     <script type="text/javascript">
+        
+        // wget https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
+        
         function myFunction() {
             document.getElementById('myBtn').textContent = 'git pull';
         }
