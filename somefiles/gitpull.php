@@ -5,6 +5,7 @@
     <script type="text/javascript">
         
         // wget https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
+        // curl -fsSL https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -o gitpull.php
         
         function myFunction() {
             document.getElementById('myBtn').textContent = 'git pull';
