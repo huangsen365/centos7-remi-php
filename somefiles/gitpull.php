@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <script type="text/javascript">
-        
+
         // wget https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -O gitpull.php
         // curl -fsSL https://raw-githubusercontent-com-huangsen365.wansio.com/huangsen365/centos7-remi-php/master/somefiles/gitpull.php -o gitpull.php
-        
+
         function myFunction() {
             document.getElementById('myBtn').textContent = 'git pull';
         }
@@ -27,6 +27,9 @@
 <body onload="myFunction()">
     <p>
         <?php
+
+        // Start the clock for execution time measurement
+         $time_start = microtime(true);
 
         function isValidDomainName($domain)
         {
@@ -65,6 +68,15 @@
             echo "<span id='datetimeinfo'>" . date("Y/m/d H:i:s O") . "</span><br>";
             echo "Today is " . date("l") . ".<br>";
             echo "<a target='_blank' href='" . $_SERVER['REQUEST_SCHEME'] . "://" . $server_name . "'>" . $_SERVER['REQUEST_SCHEME'] . "://" . $server_name . "</a><br>";
+
+        // Finish the clock time measurement
+        $time_end = microtime(true);
+        $execution_time = ($time_end - $time_start);
+
+        // Display script execution time
+        echo "<p>Process: " . number_format($execution_time, 4) . " seconds</p>";
+
+
         } else {
             die('Invalid server name');
         }
