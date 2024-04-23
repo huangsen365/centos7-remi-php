@@ -8,6 +8,7 @@ iftop
 jq
 libaio
 logrotate
+lsof
 mariadb-server
 mod_security
 mod_security_crs
